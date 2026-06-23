@@ -1,0 +1,209 @@
+[
+  {
+    "asset_id": "A0001",
+    "asset_name": "Client / End-User Host",
+    "safety": "Negligible",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 3
+  },
+  {
+    "asset_id": "A0002",
+    "asset_name": "Web Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0003",
+    "asset_name": "Mail Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0004",
+    "asset_name": "Login / Remote Access Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0005",
+    "asset_name": "Authentication Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0006",
+    "asset_name": "Directory Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0007",
+    "asset_name": "File Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "A0008",
+    "asset_name": "Database Server",
+    "safety": "Negligible",
+    "financial": "Severe",
+    "operational": "Major",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "A0009",
+    "asset_name": "Content Management Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0010",
+    "asset_name": "Instant Messaging Server",
+    "safety": "Negligible",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0011",
+    "asset_name": "Proxy Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0012",
+    "asset_name": "Name Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0013",
+    "asset_name": "Network Firewall",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0014",
+    "asset_name": "Network Router",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0015",
+    "asset_name": "Network Switch",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0016",
+    "asset_name": "Network Management Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0017",
+    "asset_name": "Software Distribution Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0018",
+    "asset_name": "Virtualization Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0019",
+    "asset_name": "Cloud Environment",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0020",
+    "asset_name": "Backup Server",
+    "safety": "Negligible",
+    "financial": "Severe",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0021",
+    "asset_name": "Log / SIEM Server",
+    "safety": "Negligible",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0022",
+    "asset_name": "Print Server",
+    "safety": "Negligible",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "A0023",
+    "asset_name": "Terminal Server",
+    "safety": "Negligible",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  }
+]

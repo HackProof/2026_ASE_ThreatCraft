@@ -1,0 +1,426 @@
+[
+  {
+    "id": "Threat_19",
+    "name": "Malicious App",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_20",
+    "name": "Phishing",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_24",
+    "name": "Malicious SMS",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_33",
+    "name": "Unsecured Web APIs",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_34",
+    "name": "Hacking in-vehicle apps",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_35",
+    "name": "Malicious App Delivery",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_36",
+    "name": "Drive-by Compromise",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_38",
+    "name": "Exploit via backend service",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+  {
+    "id": "Threat_40",
+    "name": "External Remote Services",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["remote"],
+    "feasibility": "high"
+  },
+
+  {
+    "id": "Threat_42",
+    "name": "Valid Accounts",
+    "tactics": ["Persistence", "Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "high"
+  },
+
+  {
+    "id": "Threat_04",
+    "name": "Analog Sensor Attacks",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_05",
+    "name": "Downgrade to insecure Protocols",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_06",
+    "name": "Jamming or Denial of Service",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_07",
+    "name": "Manipulate Communications",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_08",
+    "name": "Relay Communications",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_12",
+    "name": "LiDAR Attack",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_13",
+    "name": "Spoofing FMCW Radar",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_14",
+    "name": "Black Hole Attacks",
+    "tactics": ["Manipulate Environment"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_17",
+    "name": "Exploit via Radio Interface",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_23",
+    "name": "Radio Data System (RDS) Attacks",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_25",
+    "name": "Exploitation of Wi-Fi Stack",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_26",
+    "name": "Gain access to Wi-Fi Hotspot",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_27",
+    "name": "Exploitation via Bluetooth",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_28",
+    "name": "Exploitation via C-V2X",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+  {
+    "id": "Threat_29",
+    "name": "Exploitation via DSRC",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["adjacent"],
+    "feasibility": "medium"
+  },
+
+  {
+    "id": "Threat_15",
+    "name": "Aftermarket, Customer, or Dealer Equipment",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_16",
+    "name": "Browser Compromise",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_18",
+    "name": "Exploit via Removable Media",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_21",
+    "name": "Physical Modification",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_31",
+    "name": "Exploitation of OBD Dongles",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_32",
+    "name": "Exploitation via OBD Interface",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_39",
+    "name": "Exploit via OBD port",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+  {
+    "id": "Threat_41",
+    "name": "Replication Through Removable Media",
+    "tactics": ["Initial Access"],
+    "attack_vector": ["physical"],
+    "feasibility": "very low"
+  },
+
+  {
+    "id": "Threat_52",
+    "name": "Abuse Standard Diagnostic Protocol for Persistence",
+    "tactics": ["Persistence"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_53",
+    "name": "Disable Software Update",
+    "tactics": ["Persistence"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_56",
+    "name": "Compromise Cryptographic Security",
+    "tactics": ["Persistence"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_58",
+    "name": "Firmware Installation - Reprogram ECU",
+    "tactics": ["Persistence"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_61",
+    "name": "Rewrite ECU Image/Firmware",
+    "tactics": ["Persistence"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_62",
+    "name": "Abuse Elevation Control Mechanism",
+    "tactics": ["Defense Evasion","Privilege Escalation"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_73",
+    "name": "Bypass Code Integrity Protections",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_74",
+    "name": "Bypass Network Filtering",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_75",
+    "name": "Bypass UDS Security Access",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_77",
+    "name": "Bypass Code Signing Check",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_78",
+    "name": "Firmware Installation - Reprogram ECU: Downgrade",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_79",
+    "name": "Deactivate Immobilizer",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_80",
+    "name": "Enable Remote Functions",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_81",
+    "name": "Deobfuscate/Decode Files or Information",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_83",
+    "name": "Impair Defenses",
+    "tactics": ["Defense Evasion"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_126",
+    "name": "Cellular Communication",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_127",
+    "name": "Internet Communication",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_130",
+    "name": "Standard Cryptographic Protocol",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_131",
+    "name": "C2 via Mid Range Wireless Communication",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_132",
+    "name": "C2 via Wide Range Wireless Communication",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_133",
+    "name": "Application Layer Protocol",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_134",
+    "name": "Communication Through Diagnostic Port",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_137",
+    "name": "Dynamic Resolution",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_138",
+    "name": "Encrypted Channel",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_139",
+    "name": "Non-Application Layer Protocol",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_140",
+    "name": "Non-Standard Port",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  },
+  {
+    "id": "Threat_141",
+    "name": "Protocol Tunneling",
+    "tactics": ["Command and Control"],
+    "attack_vector": ["local"],
+    "feasibility": "low"
+  }
+]

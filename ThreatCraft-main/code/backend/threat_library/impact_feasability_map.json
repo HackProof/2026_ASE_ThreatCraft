@@ -1,0 +1,122 @@
+{
+    "impact_feasability_map_record" : [
+        {
+            "severity" : "very high",
+            "feasability" : "very low",  
+            "risk" : 2
+        },
+        {
+            "severity" : "very high",
+            "feasability" : "low",  
+            "risk" : 3
+        },
+        {
+            "severity" : "very high",
+            "feasability" : "medium",  
+            "risk" : 4
+        },
+        {
+            "severity" : "very high",
+            "feasability" : "high",  
+            "risk" : 4
+        },
+       {
+            "severity" : "high",
+            "feasability" : "very low",  
+            "risk" : 1
+        },
+        {
+            "severity" : "high",
+            "feasability" : "low",  
+            "risk" : 2
+        },
+        {
+            "severity" : "high",
+            "feasability" : "medium",  
+            "risk" : 3
+        },
+        {
+            "severity" : "high",
+            "feasability" : "high",  
+            "risk" : 4
+        },
+        {
+            "severity" : "medium",
+            "feasability" : "very low",  
+            "risk" : 1
+        },
+        {
+            "severity" : "medium",
+            "feasability" : "low",  
+            "risk" : 1
+        },
+        {
+            "severity" : "medium",
+            "feasability" : "medium",  
+            "risk" : 2
+        },
+        {
+            "severity" : "medium",
+            "feasability" : "high",  
+            "risk" : 3
+        },
+        {
+            "severity" : "low",
+            "feasability" : "very low",  
+            "risk" : 1
+        },
+        {
+            "severity" : "low",
+            "feasability" : "low",  
+            "risk" : 1
+        },
+        {
+            "severity" : "low",
+            "feasability" : "medium",  
+            "risk" : 1
+        },
+        {
+            "severity" : "low",
+            "feasability" : "high",  
+            "risk" : 1
+        }
+    ],
+
+    "impact_severity_map_record" : [
+        {
+            "phase" : ["In"],
+            "impact" : "*",
+            "severity" : "low"
+        },
+        {
+            "phase" : ["In", "Through"],
+            "impact" : 2,
+            "severity" : "low"
+        },       
+        {
+            "phase" : ["In", "Through"],
+            "impact" : 3,
+            "severity" : "medium"
+        },
+        {
+            "phase" : ["In", "Through"],
+            "impact" : 4,
+            "severity" : "high"
+        },
+        {
+            "phase" : ["In", "Through", "Out"],
+            "impact" : 2,
+            "severity" : "medium"
+        },
+        {
+            "phase" : ["In", "Through", "Out"],
+            "impact" : 3,
+            "severity" : "high"
+        },
+        {
+            "phase" : ["In", "Through", "Out"],
+            "impact" : 4,
+            "severity" : "very high"
+        }
+    ]
+}

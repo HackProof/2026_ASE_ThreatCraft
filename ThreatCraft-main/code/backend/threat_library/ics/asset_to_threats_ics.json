@@ -1,0 +1,6193 @@
+{
+  "framework": "MITRE ATT&CK for ICS",
+  "assets": [
+    {
+      "asset_id": "A0001",
+      "asset_name": "Workstation",
+      "threats": [
+        {
+          "id": "T0817",
+          "name": "Drive-by Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0819",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0873",
+          "name": "Project File Infection",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0852",
+          "name": "Screen Capture",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0873.001",
+          "name": "Siemens Project File Format",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0867",
+          "name": "Lateral Tool Transfer",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0887",
+          "name": "Wireless Sniffing",
+          "tactics": [
+            "Collection",
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0860",
+          "name": "Wireless Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0894",
+          "name": "System Binary Proxy Execution",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0863",
+          "name": "User Execution",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0864",
+          "name": "Transient Cyber Asset",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0865",
+          "name": "Spearphishing Attachment",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0895",
+          "name": "Autorun Image",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0883",
+          "name": "Internet Accessible Device",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0002",
+      "asset_name": "Human-Machine Interface (HMI)",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0852",
+          "name": "Screen Capture",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0894",
+          "name": "System Binary Proxy Execution",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0863",
+          "name": "User Execution",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0895",
+          "name": "Autorun Image",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0003",
+      "asset_name": "Programmable Logic Controller (PLC)",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0821",
+          "name": "Modify Controller Tasking",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843",
+          "name": "Program Download",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0889",
+          "name": "Modify Program",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.001",
+          "name": "Download All",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0802",
+          "name": "Automated Collection",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0836",
+          "name": "Modify Parameter",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693",
+          "name": "Modify Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0858",
+          "name": "Change Operating Mode",
+          "tactics": [
+            "Defense Evasion",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0843.002",
+          "name": "Online Edit",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Initial Access",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.003",
+          "name": "Program Append",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0845",
+          "name": "Program Upload",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T1693.002",
+          "name": "Module Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0835",
+          "name": "Manipulate I/O Image",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0868",
+          "name": "Detect Operating Mode",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0877",
+          "name": "I/O Image",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0004",
+      "asset_name": "Remote Terminal Unit (RTU)",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Defense Evasion",
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0836",
+          "name": "Modify Parameter",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Defense Evasion",
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Defense Evasion",
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0005",
+      "asset_name": "Intelligent Electronic Device (IED)",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0836",
+          "name": "Modify Parameter",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0006",
+      "asset_name": "Data Historian",
+      "threats": [
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0802",
+          "name": "Automated Collection",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0811",
+          "name": "Data from Information Repositories",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0894",
+          "name": "System Binary Proxy Execution",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0895",
+          "name": "Autorun Image",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0007",
+      "asset_name": "Control Server",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0802",
+          "name": "Automated Collection",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0867",
+          "name": "Lateral Tool Transfer",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0811",
+          "name": "Data from Information Repositories",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0894",
+          "name": "System Binary Proxy Execution",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0895",
+          "name": "Autorun Image",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0008",
+      "asset_name": "Application Server",
+      "threats": [
+        {
+          "id": "T0819",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0867",
+          "name": "Lateral Tool Transfer",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0894",
+          "name": "System Binary Proxy Execution",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0883",
+          "name": "Internet Accessible Device",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0895",
+          "name": "Autorun Image",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0009",
+      "asset_name": "Data Gateway",
+      "threats": [
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0010",
+      "asset_name": "Safety Controller",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0821",
+          "name": "Modify Controller Tasking",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843",
+          "name": "Program Download",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0889",
+          "name": "Modify Program",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.001",
+          "name": "Download All",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693",
+          "name": "Modify Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0858",
+          "name": "Change Operating Mode",
+          "tactics": [
+            "Defense Evasion",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0843.002",
+          "name": "Online Edit",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0845",
+          "name": "Program Upload",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Initial Access",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.003",
+          "name": "Program Append",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T1693.002",
+          "name": "Module Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0868",
+          "name": "Detect Operating Mode",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0835",
+          "name": "Manipulate I/O Image",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0877",
+          "name": "I/O Image",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0011",
+      "asset_name": "Virtual Private Network (VPN) Server",
+      "threats": [
+        {
+          "id": "T0819",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Impair Process Control",
+            "Persistence",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0867",
+          "name": "Lateral Tool Transfer",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0883",
+          "name": "Internet Accessible Device",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0012",
+      "asset_name": "Jump Host",
+      "threats": [
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0849",
+          "name": "Masquerading",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0852",
+          "name": "Screen Capture",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0867",
+          "name": "Lateral Tool Transfer",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0865",
+          "name": "Spearphishing Attachment",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0894",
+          "name": "System Binary Proxy Execution",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0863",
+          "name": "User Execution",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0895",
+          "name": "Autorun Image",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0013",
+      "asset_name": "Field I/O",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0887",
+          "name": "Wireless Sniffing",
+          "tactics": [
+            "Discovery",
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0860",
+          "name": "Wireless Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0867",
+          "name": "Lateral Tool Transfer",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.002",
+          "name": "Hardcoded Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0014",
+      "asset_name": "Routers",
+      "threats": [
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0015",
+      "asset_name": "Switch",
+      "threats": [
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Impair Process Control",
+            "Persistence",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0883",
+          "name": "Internet Accessible Device",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0016",
+      "asset_name": "Firewall",
+      "threats": [
+        {
+          "id": "T0819",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0807",
+          "name": "Command-Line Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Impair Process Control",
+            "Persistence",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0823",
+          "name": "Graphical User Interface",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Lateral Movement",
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0893",
+          "name": "Data from Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0853",
+          "name": "Scripting",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0883",
+          "name": "Internet Accessible Device",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0881",
+          "name": "Service Stop",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0017",
+      "asset_name": "Distributed Control System (DCS) Controller",
+      "threats": [
+        {
+          "id": "T0822",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0821",
+          "name": "Modify Controller Tasking",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843",
+          "name": "Program Download",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0889",
+          "name": "Modify Program",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.001",
+          "name": "Download All",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0802",
+          "name": "Automated Collection",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0836",
+          "name": "Modify Parameter",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693",
+          "name": "Modify Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0858",
+          "name": "Change Operating Mode",
+          "tactics": [
+            "Defense Evasion",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0843.002",
+          "name": "Online Edit",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693.001",
+          "name": "System Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.003",
+          "name": "Program Append",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0845",
+          "name": "Program Upload",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Initial Access",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1693.002",
+          "name": "Module Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0835",
+          "name": "Manipulate I/O Image",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0886",
+          "name": "Remote Services",
+          "tactics": [
+            "Initial Access",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0868",
+          "name": "Detect Operating Mode",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0877",
+          "name": "I/O Image",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0018",
+      "asset_name": "Programmable Automation Controller (PAC)",
+      "threats": [
+        {
+          "id": "T0847",
+          "name": "Replication Through Removable Media",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0859",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0820",
+          "name": "Exploitation for Evasion",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0869",
+          "name": "Standard Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0840",
+          "name": "Network Connection Enumeration",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0874",
+          "name": "Hooking",
+          "tactics": [
+            "Privilege Escalation",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0821",
+          "name": "Modify Controller Tasking",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843",
+          "name": "Program Download",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0801",
+          "name": "Monitor Process State",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0800",
+          "name": "Activate Firmware Update Mode",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0806",
+          "name": "Brute Force I/O",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0848",
+          "name": "Rogue Master",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T0889",
+          "name": "Modify Program",
+          "tactics": [
+            "Persistence"
+          ]
+        },
+        {
+          "id": "T0851",
+          "name": "Rootkit",
+          "tactics": [
+            "Defense Evasion",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0884",
+          "name": "Connection Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0842",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0890",
+          "name": "Exploitation for Privilege Escalation",
+          "tactics": [
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T0834",
+          "name": "Native API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.001",
+          "name": "Download All",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0802",
+          "name": "Automated Collection",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0809",
+          "name": "Data Destruction",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0836",
+          "name": "Modify Parameter",
+          "tactics": [
+            "Impair Process Control"
+          ]
+        },
+        {
+          "id": "T0862",
+          "name": "Supply Chain Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1693",
+          "name": "Modify Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0858",
+          "name": "Change Operating Mode",
+          "tactics": [
+            "Defense Evasion",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0885",
+          "name": "Commonly Used Port",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T0846",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0843.002",
+          "name": "Online Edit",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0830",
+          "name": "Adversary-in-the-Middle",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0814",
+          "name": "Denial of Service",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692",
+          "name": "Unauthorized Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0866",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "Initial Access",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1693.002",
+          "name": "Module Firmware",
+          "tactics": [
+            "Persistence",
+            "Impair Process Control",
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0872",
+          "name": "Indicator Removal on Host",
+          "tactics": [
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T0846.001",
+          "name": "Port Scan",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0871",
+          "name": "Execution through API",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T0843.003",
+          "name": "Program Append",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0845",
+          "name": "Program Upload",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0816",
+          "name": "Device Restart/Shutdown",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.001",
+          "name": "Command Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T1694",
+          "name": "Insecure Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.002",
+          "name": "Broadcast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0861",
+          "name": "Point & Tag Identification",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0835",
+          "name": "Manipulate I/O Image",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1692.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Impair Process Control",
+            "Defense Evasion"
+          ]
+        },
+        {
+          "id": "T1694.001",
+          "name": "Default Credentials",
+          "tactics": [
+            "Persistence",
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T0846.003",
+          "name": "Multicast Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0868",
+          "name": "Detect Operating Mode",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0838",
+          "name": "Modify Alarm Settings",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0888",
+          "name": "Remote System Information Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T0877",
+          "name": "I/O Image",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T0878",
+          "name": "Alarm Suppression",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T0892",
+          "name": "Change Credential",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691",
+          "name": "Block Operational Technology Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.001",
+          "name": "Command Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1691.002",
+          "name": "Reporting Message",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695",
+          "name": "Block Communications",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.001",
+          "name": "Serial COM",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.002",
+          "name": "Ethernet",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        },
+        {
+          "id": "T1695.003",
+          "name": "Wi-Fi",
+          "tactics": [
+            "Inhibit Response Function"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "E3",
+      "asset_name": "Physical Power Distribution Process",
+      "asset_type": "external_entity",
+      "case_id": "C0028",
+      "threats": [
+        {
+          "id": "T0831",
+          "name": "Manipulation of Control",
+          "tactics": [
+            "Impact"
+          ]
+        },
+        {
+          "id": "T0826",
+          "name": "Loss of Availability",
+          "tactics": [
+            "Impact"
+          ]
+        },
+        {
+          "id": "T0827",
+          "name": "Loss of Control",
+          "tactics": [
+            "Impact"
+          ]
+        },
+        {
+          "id": "T0828",
+          "name": "Loss of Productivity and Revenue",
+          "tactics": [
+            "Impact"
+          ]
+        },
+        {
+          "id": "T0813",
+          "name": "Denial of Control",
+          "tactics": [
+            "Impact"
+          ]
+        }
+      ]
+    }
+  ]
+}

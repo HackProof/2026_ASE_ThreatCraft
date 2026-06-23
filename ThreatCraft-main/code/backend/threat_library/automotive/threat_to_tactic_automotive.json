@@ -1,0 +1,1293 @@
+{
+  "tactics": [
+    {
+      "tactic": "Reconnaissance",
+      "threats": [
+        {
+          "id": "Threat_02",
+          "name": "Gather Target Information – from Vehicle"
+        }
+      ]
+    },
+    {
+      "tactic": "Manipulate Environment",
+      "threats": [
+        {
+          "id": "Threat_03",
+          "name": "Adversarial Machine Learning"
+        },
+        {
+          "id": "Threat_04",
+          "name": "Analog Sensor Attacks"
+        },
+        {
+          "id": "Threat_05",
+          "name": "Downgrade to Insecure Protocols"
+        },
+        {
+          "id": "Threat_06",
+          "name": "Jamming or Denial of Service"
+        },
+        {
+          "id": "Threat_07",
+          "name": "Manipulate Communications"
+        },
+        {
+          "id": "Threat_08",
+          "name": "Relay Communications"
+        },
+        {
+          "id": "Threat_12",
+          "name": "LiDAR Attack"
+        },
+        {
+          "id": "Threat_13",
+          "name": "Spoofing FMCW Radar"
+        },
+        {
+          "id": "Threat_14",
+          "name": "Black Hole Attacks"
+        },
+        {
+          "id": "Threat_171",
+          "name": "QoS manipulation"
+        }
+      ]
+    },
+    {
+      "tactic": "Initial Access",
+      "threats": [
+        {
+          "id": "Threat_15",
+          "name": "Aftermarket, Customer, or Dealer Equipment"
+        },
+        {
+          "id": "Threat_16",
+          "name": "Browser Compromise"
+        },
+        {
+          "id": "Threat_17",
+          "name": "Exploit via Radio Interface"
+        },
+        {
+          "id": "Threat_18",
+          "name": "Exploit via Removable Media"
+        },
+        {
+          "id": "Threat_19",
+          "name": "Malicious App"
+        },
+        {
+          "id": "Threat_20",
+          "name": "Phishing"
+        },
+        {
+          "id": "Threat_21",
+          "name": "Physical Modification"
+        },
+        {
+          "id": "Threat_23",
+          "name": "Radio Data System (RDS) Attacks"
+        },
+        {
+          "id": "Threat_24",
+          "name": "Malicious SMS"
+        },
+        {
+          "id": "Threat_25",
+          "name": "Exploitation of Wi-Fi Stack"
+        },
+        {
+          "id": "Threat_26",
+          "name": "Gain access to Wi-Fi Hotspot"
+        },
+        {
+          "id": "Threat_27",
+          "name": "Exploitation via Bluetooth"
+        },
+        {
+          "id": "Threat_28",
+          "name": "Exploitation via C-V2X"
+        },
+        {
+          "id": "Threat_29",
+          "name": "Exploitation via DSRC"
+        },
+        {
+          "id": "Threat_31",
+          "name": "Exploitation of OBD Dongles"
+        },
+        {
+          "id": "Threat_32",
+          "name": "Exploitation via OBD Interface"
+        },
+        {
+          "id": "Threat_33",
+          "name": "Unsecured Web APIs"
+        },
+        {
+          "id": "Threat_34",
+          "name": "Hacking in-vehicle apps"
+        },
+        {
+          "id": "Threat_35",
+          "name": "Malicious App Delivery"
+        },
+        {
+          "id": "Threat_36",
+          "name": "Drive-by Compromise"
+        },
+        {
+          "id": "Threat_37",
+          "name": "Exploitation via charging station"
+        },
+        {
+          "id": "Threat_39",
+          "name": "Exploit via OBD port"
+        },
+        {
+          "id": "Threat_40",
+          "name": "External Remote Services"
+        },
+        {
+          "id": "Threat_41",
+          "name": "Replication Through Removable Media"
+        },
+        {
+          "id": "Threat_42",
+          "name": "Valid Accounts"
+        }
+      ]
+    },
+    {
+      "tactic": "Persistence",
+      "threats": [
+        {
+          "id": "Threat_42",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "Threat_52",
+          "name": "Abuse Standard Diagnostic Protocol for Persistence"
+        },
+        {
+          "id": "Threat_53",
+          "name": "Disable Software Update"
+        },
+        {
+          "id": "Threat_56",
+          "name": "Compromise Cryptographic Security"
+        },
+        {
+          "id": "Threat_58",
+          "name": "Firmware Installation - Reprogram ECU"
+        },
+        {
+          "id": "Threat_61",
+          "name": "Rewrite ECU Image/Firmware"
+        }
+      ]
+    },
+    {
+      "tactic": "Defense Evasion",
+      "threats": [
+        {
+          "id": "Threat_42",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "Threat_62",
+          "name": "Abuse Elevation Control Mechanism"
+        },
+        {
+          "id": "Threat_73",
+          "name": "Bypass Code Integrity Protections"
+        },
+        {
+          "id": "Threat_74",
+          "name": "Bypass Network Filtering"
+        },
+        {
+          "id": "Threat_75",
+          "name": "Bypass UDS Security Access"
+        },
+        {
+          "id": "Threat_77",
+          "name": "Bypass Code Signing Check"
+        },
+        {
+          "id": "Threat_78",
+          "name": "Firmware Installation - Reprogram ECU: Downgrade"
+        },
+        {
+          "id": "Threat_79",
+          "name": "Deactivate Immobilizer"
+        },
+        {
+          "id": "Threat_80",
+          "name": "Enable Remote Functions"
+        },
+        {
+          "id": "Threat_81",
+          "name": "Deobfuscate/Decode Files or Information"
+        },
+        {
+          "id": "Threat_83",
+          "name": "Impair Defenses"
+        }
+      ]
+    },
+    {
+      "tactic": "Command and Control",
+      "threats": [
+        {
+          "id": "Threat_126",
+          "name": "Cellular Communication"
+        },
+        {
+          "id": "Threat_127",
+          "name": "Internet Communication"
+        },
+        {
+          "id": "Threat_128",
+          "name": "Receive Only Communication"
+        },
+        {
+          "id": "Threat_129",
+          "name": "Short Range Wireless Communication"
+        },
+        {
+          "id": "Threat_130",
+          "name": "Standard Cryptographic Protocol"
+        },
+        {
+          "id": "Threat_131",
+          "name": "C2 via Mid Range Wireless Communication"
+        },
+        {
+          "id": "Threat_132",
+          "name": "C2 via Wide Range Wireless Communication"
+        },
+        {
+          "id": "Threat_133",
+          "name": "Application Layer Protocol"
+        },
+        {
+          "id": "Threat_134",
+          "name": "Communication Through Diagnostic Port"
+        },
+        {
+          "id": "Threat_137",
+          "name": "Dynamic Resolution"
+        },
+        {
+          "id": "Threat_138",
+          "name": "Encrypted Channel"
+        },
+        {
+          "id": "Threat_139",
+          "name": "Non-Application Layer Protocol"
+        },
+        {
+          "id": "Threat_140",
+          "name": "Non-Standard Port"
+        },
+        {
+          "id": "Threat_141",
+          "name": "Protocol Tunneling"
+        }
+      ]
+    },
+    {
+      "tactic": "Discovery",
+      "threats": [
+        {
+          "id": "Threat_88",
+          "name": "Network Sniffing"
+        },
+        {
+          "id": "Threat_96",
+          "name": "File and Directory Discovery"
+        },
+        {
+          "id": "Threat_97",
+          "name": "Location Tracking"
+        },
+        {
+          "id": "Threat_98",
+          "name": "Network Service Scanning"
+        },
+        {
+          "id": "Threat_99",
+          "name": "Process Discovery"
+        },
+        {
+          "id": "Threat_102",
+          "name": "System Network Configuration Discovery"
+        },
+        {
+          "id": "Threat_103",
+          "name": "System Network Connections Discovery"
+        },
+        {
+          "id": "Threat_104",
+          "name": "ECU Discovery"
+        },
+        {
+          "id": "Threat_105",
+          "name": "ECU Service Discovery"
+        },
+        {
+          "id": "Threat_106",
+          "name": "UDS Service Discovery"
+        }
+      ]
+    },
+    {
+      "tactic": "Privilege Escalation",
+      "threats": [
+        {
+          "id": "Threat_42",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "Threat_62",
+          "name": "Abuse Elevation Control Mechanism"
+        },
+        {
+          "id": "Threat_63",
+          "name": "Exploit Co-Located Computing Device for Privilege Escalation"
+        },
+        {
+          "id": "Threat_64",
+          "name": "Exploit OS Vulnerability"
+        },
+        {
+          "id": "Threat_67",
+          "name": "Process Injection"
+        },
+        {
+          "id": "Threat_68",
+          "name": "Reprogram Co-Located Computing Device for Privilege Escalation"
+        },
+        {
+          "id": "Threat_69",
+          "name": "Exploit Application Vulnerability"
+        },
+        {
+          "id": "Threat_70",
+          "name": "Reprogram ECU for privilege escalation"
+        }
+      ]
+    },
+    {
+      "tactic": "Execution",
+      "threats": [
+        {
+          "id": "Threat_43",
+          "name": "Command and Scripting Interpreter"
+        },
+        {
+          "id": "Threat_44",
+          "name": "Native API"
+        },
+        {
+          "id": "Threat_45",
+          "name": "Abuse Standard Diagnostic Protocol to Temporarily Modify Execution"
+        },
+        {
+          "id": "Threat_46",
+          "name": "Inter-process Communication: D-Bus"
+        },
+        {
+          "id": "Threat_48",
+          "name": "User Execution"
+        },
+        {
+          "id": "Threat_51",
+          "name": "System Services"
+        }
+      ]
+    },
+    {
+      "tactic": "credential access",
+      "threats": [
+        {
+          "id": "Threat_85",
+          "name": "Capture SMS Message"
+        },
+        {
+          "id": "Threat_86",
+          "name": "Input Capture"
+        },
+        {
+          "id": "Threat_87",
+          "name": "Input Prompt"
+        },
+        {
+          "id": "Threat_88",
+          "name": "Network Sniffing"
+        },
+        {
+          "id": "Threat_89",
+          "name": "ECU Credential Dumping"
+        },
+        {
+          "id": "Threat_90",
+          "name": "Unsecured Credentials"
+        },
+        {
+          "id": "Threat_91",
+          "name": "URI Hijacking"
+        },
+        {
+          "id": "Threat_92",
+          "name": "Adversary-in-the-Middle"
+        },
+        {
+          "id": "Threat_93",
+          "name": "Brute Force"
+        },
+        {
+          "id": "Threat_94",
+          "name": "OS Credential Dumping"
+        }
+      ]
+    },
+    {
+      "tactic": "Lateral Movement",
+      "threats": [
+        {
+          "id": "Threat_56",
+          "name": "Compromise Cryptographic Security"
+        },
+        {
+          "id": "Threat_107",
+          "name": "Abuse Standard Diagnostic Protocol for Lateral Movement"
+        },
+        {
+          "id": "Threat_108",
+          "name": "Bridge Vehicle Networks"
+        },
+        {
+          "id": "Threat_109",
+          "name": "Exploit ECU for Lateral Movement"
+        },
+        {
+          "id": "Threat_110",
+          "name": "Remote Services"
+        },
+        {
+          "id": "Threat_111",
+          "name": "Reprogram ECU for Lateral Movement"
+        },
+        {
+          "id": "Threat_112",
+          "name": "Exploitation of Remote Services"
+        },
+        {
+          "id": "Threat_113",
+          "name": "Backend Remote Services"
+        },
+        {
+          "id": "Threat_114",
+          "name": "Exploitation of Backend Remote Services"
+        },
+        {
+          "id": "Threat_115",
+          "name": "Exploitation of Remote Services in In-Vehicle Network"
+        },
+        {
+          "id": "Threat_116",
+          "name": "Remote services in In-Vehicle Network"
+        }
+      ]
+    },
+    {
+      "tactic": "Collection",
+      "threats": [
+        {
+          "id": "Threat_85",
+          "name": "Capture SMS Message"
+        },
+        {
+          "id": "Threat_86",
+          "name": "Input Capture"
+        },
+        {
+          "id": "Threat_88",
+          "name": "Network Sniffing"
+        },
+        {
+          "id": "Threat_92",
+          "name": "Adversary-in-the-Middle"
+        },
+        {
+          "id": "Threat_97",
+          "name": "Location Tracking"
+        },
+        {
+          "id": "Threat_117",
+          "name": "Abuse Standard Diagnostic Protocol for Collection"
+        },
+        {
+          "id": "Threat_118",
+          "name": "Capture Camera or Audio"
+        },
+        {
+          "id": "Threat_119",
+          "name": "Data from Local System"
+        },
+        {
+          "id": "Threat_120",
+          "name": "Screen Capture"
+        },
+        {
+          "id": "Threat_121",
+          "name": "Gather information about ECU"
+        },
+        {
+          "id": "Threat_124",
+          "name": "Personal Information Collection"
+        },
+        {
+          "id": "Threat_125",
+          "name": "Vehicle Telemetry Collection"
+        }
+      ]
+    },
+    {
+      "tactic": "Exfiltration",
+      "threats": [
+        {
+          "id": "Threat_126",
+          "name": "Cellular Communication"
+        },
+        {
+          "id": "Threat_129",
+          "name": "Short Range Wireless Communication"
+        },
+        {
+          "id": "Threat_142",
+          "name": "Removable Media"
+        },
+        {
+          "id": "Threat_143",
+          "name": "Physical Access"
+        },
+        {
+          "id": "Threat_144",
+          "name": "Exfiltration via Memory mapped Registers"
+        }
+      ]
+    },
+    {
+      "tactic": "Affect Vehicle Function",
+      "threats": [
+        {
+          "id": "Threat_03",
+          "name": "2"
+        },
+        {
+          "id": "Threat_04",
+          "name": "Analog Sensor Attacks"
+        },
+        {
+          "id": "Threat_145",
+          "name": "Abuse Standard Diagnostic Protocol for Affecting Vehicle Function"
+        },
+        {
+          "id": "Threat_146",
+          "name": "CAN Bus Denial of Service"
+        },
+        {
+          "id": "Threat_147",
+          "name": "Denial of Service on Vehicle Function"
+        },
+        {
+          "id": "Threat_148",
+          "name": "Local Function"
+        },
+        {
+          "id": "Threat_149",
+          "name": "Modify Bus Message"
+        },
+        {
+          "id": "Threat_150",
+          "name": "Unintended Vehicle Network Message"
+        },
+        {
+          "id": "Threat_151",
+          "name": "Control HVAC"
+        },
+        {
+          "id": "Threat_152",
+          "name": "Control Engine"
+        },
+        {
+          "id": "Threat_153",
+          "name": "Control Doors"
+        },
+        {
+          "id": "Threat_154",
+          "name": "Control Lights"
+        },
+        {
+          "id": "Threat_155",
+          "name": "Control Airbag"
+        },
+        {
+          "id": "Threat_156",
+          "name": "Control Windows"
+        },
+        {
+          "id": "Threat_157",
+          "name": "Speed control"
+        },
+        {
+          "id": "Threat_158",
+          "name": "Manipulate Passenger Information System"
+        },
+        {
+          "id": "Threat_159",
+          "name": "Control Instrument Panel Cluster (IPC)"
+        }
+      ]
+    },
+    {
+      "tactic": "Impact",
+      "threats": [
+        {
+          "id": "Threat_160",
+          "name": "Denial of Service"
+        },
+        {
+          "id": "Threat_161",
+          "name": "Denial of View"
+        },
+        {
+          "id": "Threat_162",
+          "name": "Loss of Control"
+        },
+        {
+          "id": "Threat_163",
+          "name": "Enable premium features"
+        },
+        {
+          "id": "Threat_164",
+          "name": "Odometer fraud"
+        },
+        {
+          "id": "Threat_165",
+          "name": "Vehicle Theft"
+        },
+        {
+          "id": "Threat_166",
+          "name": "Loss of Financial"
+        },
+        {
+          "id": "Threat_167",
+          "name": "Loss of Safety"
+        },
+        {
+          "id": "Threat_168",
+          "name": "Manipulation of Operational"
+        },
+        {
+          "id": "Threat_169",
+          "name": "Theft of Privacy"
+        }
+      ]
+    }
+  ],
+  "threat_index": {
+    "Threat_02": {
+      "name": "Gather Target Information – from Vehicle",
+      "tactics": ["Reconnaissance"]
+    },
+    "Threat_03": {
+      "name": "2",
+      "tactics": ["Manipulate Environment", "Affect Vehicle Function"]
+    },
+    "Threat_04": {
+      "name": "Analog Sensor Attacks",
+      "tactics": ["Manipulate Environment", "Affect Vehicle Function"]
+    },
+    "Threat_05": {
+      "name": "Downgrade to Insecure Protocols",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_06": {
+      "name": "Jamming or Denial of Service",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_07": {
+      "name": "Manipulate Communications",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_08": {
+      "name": "Relay Communications",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_12": {
+      "name": "LiDAR Attack",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_13": {
+      "name": "Spoofing FMCW Radar",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_14": {
+      "name": "Black Hole Attacks",
+      "tactics": ["Manipulate Environment"]
+    },
+    "Threat_15": {
+      "name": "Aftermarket, Customer, or Dealer Equipment",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_16": {
+      "name": "Browser Compromise",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_17": {
+      "name": "Exploit via Radio Interface",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_18": {
+      "name": "Exploit via Removable Media",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_19": {
+      "name": "Malicious App",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_20": {
+      "name": "Phishing",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_21": {
+      "name": "Physical Modification",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_23": {
+      "name": "Radio Data System (RDS) Attacks",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_24": {
+      "name": "Malicious SMS",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_25": {
+      "name": "Exploitation of Wi-Fi Stack",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_26": {
+      "name": "Gain access to Wi-Fi Hotspot",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_27": {
+      "name": "Exploitation via Bluetooth",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_28": {
+      "name": "Exploitation via C-V2X",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_29": {
+      "name": "Exploitation via DSRC",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_31": {
+      "name": "Exploitation of OBD Dongles",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_32": {
+      "name": "Exploitation via OBD Interface",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_33": {
+      "name": "Unsecured Web APIs",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_34": {
+      "name": "Hacking in-vehicle apps",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_35": {
+      "name": "Malicious App Delivery",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_36": {
+      "name": "Drive-by Compromise",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_37": {
+      "name": "Exploitation via charging station",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_39": {
+      "name": "Exploit via OBD port",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_40": {
+      "name": "External Remote Services",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_41": {
+      "name": "Replication Through Removable Media",
+      "tactics": ["Initial Access"]
+    },
+    "Threat_42": {
+      "name": "Valid Accounts",
+      "tactics": ["Initial Access", "Persistence", "Defense Evasion", "Privilege Escalation"]
+    },
+    "Threat_52": {
+      "name": "Abuse Standard Diagnostic Protocol for Persistence",
+      "tactics": ["Persistence"]
+    },
+    "Threat_53": {
+      "name": "Disable Software Update",
+      "tactics": ["Persistence"]
+    },
+    "Threat_56": {
+      "name": "Compromise Cryptographic Security",
+      "tactics": ["Persistence", "Lateral Movement"]
+    },
+    "Threat_58": {
+      "name": "Firmware Installation - Reprogram ECU",
+      "tactics": ["Persistence"]
+    },
+    "Threat_61": {
+      "name": "Rewrite ECU Image/Firmware",
+      "tactics": ["Persistence"]
+    },
+    "Threat_62": {
+      "name": "Abuse Elevation Control Mechanism",
+      "tactics": ["Defense Evasion", "Privilege Escalation"]
+    },
+    "Threat_63": {
+      "name": "Exploit Co-Located Computing Device for Privilege Escalation",
+      "tactics": ["Privilege Escalation"]
+    },
+    "Threat_64": {
+      "name": "Exploit OS Vulnerability",
+      "tactics": ["Privilege Escalation"]
+    },
+    "Threat_67": {
+      "name": "Process Injection",
+      "tactics": ["Privilege Escalation"]
+    },
+    "Threat_68": {
+      "name": "Reprogram Co-Located Computing Device for Privilege Escalation",
+      "tactics": ["Privilege Escalation"]
+    },
+    "Threat_69": {
+      "name": "Exploit Application Vulnerability",
+      "tactics": ["Privilege Escalation"]
+    },
+    "Threat_70": {
+      "name": "Reprogram ECU for privilege escalation",
+      "tactics": ["Privilege Escalation"]
+    },
+    "Threat_73": {
+      "name": "Bypass Code Integrity Protections",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_74": {
+      "name": "Bypass Network Filtering",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_75": {
+      "name": "Bypass UDS Security Access",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_77": {
+      "name": "Bypass Code Signing Check",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_78": {
+      "name": "Firmware Installation - Reprogram ECU: Downgrade",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_79": {
+      "name": "Deactivate Immobilizer",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_80": {
+      "name": "Enable Remote Functions",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_81": {
+      "name": "Deobfuscate/Decode Files or Information",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_83": {
+      "name": "Impair Defenses",
+      "tactics": ["Defense Evasion"]
+    },
+    "Threat_43": {
+      "name": "Command and Scripting Interpreter",
+      "tactics": ["Execution"]
+    },
+    "Threat_44": {
+      "name": "Native API",
+      "tactics": ["Execution"]
+    },
+    "Threat_45": {
+      "name": "Abuse Standard Diagnostic Protocol to Temporarily Modify Execution",
+      "tactics": ["Execution"]
+    },
+    "Threat_46": {
+      "name": "Inter-process Communication: D-Bus",
+      "tactics": ["Execution"]
+    },
+    "Threat_48": {
+      "name": "User Execution",
+      "tactics": ["Execution"]
+    },
+    "Threat_51": {
+      "name": "System Services",
+      "tactics": ["Execution"]
+    },
+    "Threat_126": {
+      "name": "Cellular Communication",
+      "tactics": ["Command and Control", "Exfiltration"]
+    },
+    "Threat_127": {
+      "name": "Internet Communication",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_128": {
+      "name": "Receive Only Communication",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_129": {
+      "name": "Short Range Wireless Communication",
+      "tactics": ["Command and Control", "Exfiltration"]
+    },
+    "Threat_130": {
+      "name": "Standard Cryptographic Protocol",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_131": {
+      "name": "C2 via Mid Range Wireless Communication",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_132": {
+      "name": "C2 via Wide Range Wireless Communication",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_133": {
+      "name": "Application Layer Protocol",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_134": {
+      "name": "Communication Through Diagnostic Port",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_137": {
+      "name": "Dynamic Resolution",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_138": {
+      "name": "Encrypted Channel",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_139": {
+      "name": "Non-Application Layer Protocol",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_140": {
+      "name": "Non-Standard Port",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_141": {
+      "name": "Protocol Tunneling",
+      "tactics": ["Command and Control"]
+    },
+    "Threat_88": {
+      "name": "Network Sniffing",
+      "tactics": ["Discovery", "credential access", "Collection"]
+    },
+    "Threat_96": {
+      "name": "File and Directory Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_97": {
+      "name": "Location Tracking",
+      "tactics": ["Discovery", "Collection"]
+    },
+    "Threat_98": {
+      "name": "Network Service Scanning",
+      "tactics": ["Discovery"]
+    },
+    "Threat_99": {
+      "name": "Process Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_102": {
+      "name": "System Network Configuration Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_103": {
+      "name": "System Network Connections Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_104": {
+      "name": "ECU Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_105": {
+      "name": "ECU Service Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_106": {
+      "name": "UDS Service Discovery",
+      "tactics": ["Discovery"]
+    },
+    "Threat_85": {
+      "name": "Capture SMS Message",
+      "tactics": ["credential access", "Collection"]
+    },
+    "Threat_86": {
+      "name": "Input Capture",
+      "tactics": ["credential access", "Collection"]
+    },
+    "Threat_87": {
+      "name": "Input Prompt",
+      "tactics": ["credential access"]
+    },
+    "Threat_89": {
+      "name": "ECU Credential Dumping",
+      "tactics": ["credential access"]
+    },
+    "Threat_90": {
+      "name": "Unsecured Credentials",
+      "tactics": ["credential access"]
+    },
+    "Threat_91": {
+      "name": "URI Hijacking",
+      "tactics": ["credential access"]
+    },
+    "Threat_92": {
+      "name": "Adversary-in-the-Middle",
+      "tactics": ["credential access", "Collection"]            
+    },
+    "Threat_93": {
+      "name": "Brute Force",
+      "tactics": ["credential access"]
+    },
+    "Threat_94": {
+      "name": "OS Credential Dumping",
+      "tactics": ["credential access"]
+    },
+    "Threat_107": {
+      "name": "Abuse Standard Diagnostic Protocol for Lateral Movement",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_108": {
+      "name": "Bridge Vehicle Networks",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_109": {
+      "name": "Exploit ECU for Lateral Movement",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_110": {
+      "name": "Remote Services",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_111": {
+      "name": "Reprogram ECU for Lateral Movement",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_112": {
+      "name": "Exploitation of Remote Services",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_113": {
+      "name": "Backend Remote Services",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_114": {
+      "name": "Exploitation of Backend Remote Services",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_115": {
+      "name": "Exploitation of Remote Services in In-Vehicle Network",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_116": {
+      "name": "Remote services in In-Vehicle Network",
+      "tactics": ["Lateral Movement"]
+    },
+    "Threat_117": {
+      "name": "Abuse Standard Diagnostic Protocol for Collection",
+      "tactics": ["Collection"]
+    },
+    "Threat_118": {
+      "name": "Capture Camera or Audio",
+      "tactics": ["Collection"]
+    },
+    "Threat_119": {
+      "name": "Data from Local System",
+      "tactics": ["Collection"]
+    },
+    "Threat_120": {
+      "name": "Screen Capture",
+      "tactics": ["Collection"]
+    },
+    "Threat_121": {
+      "name": "Gather information about ECU",
+      "tactics": ["Collection"]
+    },
+    "Threat_124": {
+      "name": "Personal Information Collection",
+      "tactics": ["Collection"]
+    },
+    "Threat_125": {
+      "name": "Vehicle Telemetry Collection",
+      "tactics": ["Collection"]
+    },
+    "Threat_142": {
+      "name": "Removable Media",
+      "tactics": ["Exfiltration"]
+    },
+    "Threat_143": {
+      "name": "Physical Access",
+      "tactics": ["Exfiltration"]
+    },
+    "Threat_144": {
+      "name": "Exfiltration via Memory mapped Registers",
+      "tactics": ["Exfiltration"]
+    },
+    "Threat_145": {
+      "name": "Abuse Standard Diagnostic Protocol for Affecting Vehicle Function",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_146": {
+      "name": "CAN Bus Denial of Service",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_147": {
+      "name": "Denial of Service on Vehicle Function",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_148": {
+      "name": "Local Function",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_149": {
+      "name": "Modify Bus Message",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_150": {
+      "name": "Unintended Vehicle Network Message",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_151": {
+      "name": "Control HVAC",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_152": {
+      "name": "Control Engine",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_153": {
+      "name": "Control Doors",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_154": {
+      "name": "Control Lights",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_155": {
+      "name": "Control Airbag",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_156": {
+      "name": "Control Windows",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_157": {
+      "name": "Speed control",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_158": {
+      "name": "Manipulate Passenger Information System",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_159": {
+      "name": "계기판 제어 (Control Instrument Panel Cluster (IPC))",
+      "tactics": ["Affect Vehicle Function"]
+    },
+    "Threat_160": {
+      "name": "Denial of Service",
+      "tactics": ["Impact"]
+    },
+    "Threat_161": {
+      "name": "Denial of View",
+      "tactics": ["Impact"]
+    },
+    "Threat_162": {
+      "name": "Loss of Control",
+      "tactics": ["Impact"]
+    },
+    "Threat_163": {
+      "name": "Enable premium features",
+      "tactics": ["Impact"]
+    },
+    "Threat_164": {
+      "name": "Odometer fraud",
+      "tactics": ["Impact"]
+    },
+    "Threat_165": {
+      "name": "Vehicle Theft",
+      "tactics": ["Impact"]
+    },
+    "Threat_166": {
+      "name": "Loss of Financial",
+      "tactics": ["Impact"]
+    },
+    "Threat_167": {
+      "name": "Loss of Safety",
+      "tactics": ["Impact"]
+    },
+    "Threat_168": {
+      "name": "Manipulation of Operational",
+      "tactics": ["Impact"]
+    },
+    "Threat_169": {
+      "name": "Theft of Privacy",
+      "tactics": ["Impact"]
+    },
+    "Threat_171": {
+      "name": "QoS manipulation",
+      "tactics": ["Manipulate Environment"]
+    }
+  },
+
+  "UnifiedKillChain" : {
+    "In" : [
+      "Reconnaissance", 
+      "Manipulate Environment", 
+      "Initial Access", 
+      "Persistence", 
+      "Defense Evasion", 
+      "Command and Control"
+    ],
+    "Through" : [
+      "Discovery",
+      "Privilege Escalation",
+      "Execution",
+      "Credential Access",
+      "Lateral Movement"
+    ],
+    "Out" : [
+      "Collection",
+      "Exfiltration",
+      "Affect Vehicle Function",
+      "Impact"
+    ]
+  }
+}

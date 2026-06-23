@@ -1,0 +1,185 @@
+[
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_30", "dest_asset": "Asset_16" },
+    "then": {
+      "results": {
+        "op": "AND",
+        "items": [
+          { "apply_to": "Asset_16", "threats": ["Threat_150"] },
+          { "apply_to": "Asset_30", "threats": ["Threat_04"] }
+        ]
+      }
+    }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_31", "dest_asset": "Asset_16" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_16", "threats": ["Threat_150"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_32", "dest_asset": "Asset_16" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_16", "threats": ["Threat_150"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_16", "dest_asset": "Asset_25" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_25", "threats": ["Threat_150"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_16", "dest_asset": "Asset_06" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_06", "threats": ["Threat_150"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_36", "dest_asset": "Asset_03" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_03", "threats": ["Threat_05"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_37", "dest_asset": "Asset_36" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_36", "threats": ["Threat_22"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_39", "dest_asset": "Asset_46" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_46", "threats": ["Threat_29"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_38", "dest_asset": "Asset_30" },
+    "then": {
+      "results": {
+        "op": "AND",
+        "items": [
+          { "apply_to": "Asset_30", "threats": ["Threat_04"] },
+          { "apply_to": "Asset_30", "threats": ["Threat_161"] }
+        ]
+      }
+    }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_40", "dest_asset": "Asset_02" },
+    "then": {
+      "results": {
+        "op": "OR",
+        "items": [
+          { "apply_to": "Asset_02", "threats": ["Threat_25"] },
+          { "apply_to": "Asset_02", "threats": ["Threat_42"] },
+          { "apply_to": "Asset_02", "threats": ["Threat_26"] },
+          { "apply_to": "Asset_02", "threats": ["Threat_124"] },
+          { "apply_to": "Asset_02", "threats": ["Threat_169"] }
+        ]
+      }
+    }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_41", "dest_asset": "Asset_25" },
+    "then": {
+      "results": {
+        "op": "AND",
+        "items": [
+          { "apply_to": "Asset_11", "threats": ["Threat_168"] },
+          { "apply_to": "Asset_16", "threats": ["Threat_149"] }
+        ]
+      }
+    }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_41", "dest_asset": "Asset_23" },
+    "then": {
+      "results": {
+        "op": "AND",
+        "items": [
+          { "apply_to": "Asset_11", "threats": ["Threat_168"] },
+          { "apply_to": "Asset_16", "threats": ["Threat_149"] }
+        ]
+      }
+    }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_01", "dest_asset": "Asset_43" },
+    "then": { "results": { "op": "-", "items": [{ "apply_to": "Asset_43", "threats": ["Threat_168"] }] } }
+  },
+  {
+    "type": "FLOW_IMPLY_THREATS",
+    "when": { "source_asset": "Asset_34", "dest_asset": "Asset_02" },
+    "then": {
+      "results": {
+        "op": "OR",
+        "items": [
+          { "apply_to": "Asset_34", "threats": ["Threat_15"] },
+          { "apply_to": "Asset_34", "threats": ["Threat_18"] },
+          { "apply_to": "Asset_34", "threats": ["Threat_41"] }
+        ]
+      }
+    }
+  },
+
+  {
+    "type": "PRE_THREAT_ENABLES_POST_THREAT",
+    "when": { "pre_threats": { "op": "OR", "items": ["Threat_04", "Threat_12", "Threat_13"] } },
+    "then": { "post_threats": { "op": "-", "items": ["Threat_161"] } }
+  },
+  {
+    "type": "PRE_THREAT_ENABLES_POST_THREAT",
+    "when": { "pre_threats": { "op": "-", "items": ["Threat_52"] } },
+    "then": { "post_threats": { "op": "OR", "items": ["Threat_58", "Threat_78", "Threat_111"] } }
+  },
+  {
+    "type": "PRE_THREAT_ENABLES_POST_THREAT",
+    "when": { "pre_threats": { "op": "-", "items": ["Threat_56"] } },
+    "then": { "post_threats": { "op": "OR", "items": ["Threat_75", "Threat_73"] } }
+  },
+  {
+    "type": "PRE_THREAT_ENABLES_POST_THREAT",
+    "when": { "pre_threats": { "op": "OR", "items": ["Threat_45", "Threat_52", "Threat_107", "Threat_117"] } },
+    "then": { "post_threats": { "op": "-", "items": ["Threat_145"] } }
+  },
+
+  {
+    "type": "TARGET_ASSET_FORBIDS_THREATS",
+    "when": { "target_asset": "Asset_30" },
+    "then": { "forbid_threats": { "op": "-", "items": ["Threat_42"] } }
+  },
+  {
+    "type": "TARGET_ASSET_FORBIDS_THREATS",
+    "when": { "target_asset": "Asset_31" },
+    "then": { "forbid_threats": { "op": "-", "items": ["Threat_42"] } }
+  },
+  {
+    "type": "TARGET_ASSET_FORBIDS_THREATS",
+    "when": { "target_asset": "Asset_32" },
+    "then": { "forbid_threats": { "op": "-", "items": ["Threat_42"] } }
+  },
+
+  {
+    "type": "THREAT_FORBIDS_THREATS",
+    "when": { "pre_threats": { "op": "OR", "items": ["Threat_04", "Threat_12", "Threat_13", "Threat_06", "Threat_07", "Threat_23"] } },
+    "then": {
+      "forbid_threats": {
+        "op": "AND",
+        "items": [
+          "Threat_145",
+          "Threat_147",
+          "Threat_148",
+          "Threat_149",
+          "Threat_152",
+          "Threat_153",
+          "Threat_155",
+          "Threat_157",
+          "Threat_158",
+          "Threat_163",
+          "Threat_165",
+          "Threat_168"
+        ]
+      }
+    }
+  }
+]

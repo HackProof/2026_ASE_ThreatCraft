@@ -1,0 +1,1556 @@
+{
+  "framework": "MITRE ATT&CK Enterprise",
+  "profile": "File Server state-safe role-split v2 with tactic caps",
+  "assets": [
+    {
+      "asset_id": "A0001",
+      "asset_name": "Client / End-User Host",
+      "threats": [
+        {
+          "id": "T1598",
+          "name": "Phishing for Information",
+          "tactics": [
+            "Reconnaissance"
+          ]
+        },
+        {
+          "id": "T1584",
+          "name": "Compromise Infrastructure",
+          "tactics": [
+            "Resource Development"
+          ]
+        },
+        {
+          "id": "T1189",
+          "name": "Drive-by Compromise",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1078.002",
+          "name": "Domain Accounts",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1003.001",
+          "name": "LSASS Memory",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0002",
+      "asset_name": "Web Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0003",
+      "asset_name": "Mail Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0004",
+      "asset_name": "Login / Remote Access Server",
+      "threats": [
+        {
+          "id": "T1133",
+          "name": "External Remote Services",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1078.002",
+          "name": "Domain Accounts",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1110",
+          "name": "Brute Force",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1110.001",
+          "name": "Password Guessing",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1556",
+          "name": "Modify Authentication Process",
+          "tactics": [
+            "Defense Impairment"
+          ]
+        },
+        {
+          "id": "T1021.001",
+          "name": "Remote Desktop Protocol",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1219",
+          "name": "Remote Access Software",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0005",
+      "asset_name": "Authentication Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1110",
+          "name": "Brute Force",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1556",
+          "name": "Modify Authentication Process",
+          "tactics": [
+            "Defense Impairment"
+          ]
+        },
+        {
+          "id": "T1087",
+          "name": "Account Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1069",
+          "name": "Permission Groups Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1484",
+          "name": "Domain Policy Modification",
+          "tactics": [
+            "Defense Impairment"
+          ]
+        },
+        {
+          "id": "T1098",
+          "name": "Account Manipulation",
+          "tactics": [
+            "Persistence"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0006",
+      "asset_name": "Directory Server",
+      "threats": [
+        {
+          "id": "T1087",
+          "name": "Account Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1069",
+          "name": "Permission Groups Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1069.002",
+          "name": "Domain Groups",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1482",
+          "name": "Domain Trust Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003.003",
+          "name": "NTDS",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1003.006",
+          "name": "DCSync",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1484",
+          "name": "Domain Policy Modification",
+          "tactics": [
+            "Defense Impairment"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0007",
+      "asset_name": "File Server",
+      "threats": [
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1074",
+          "name": "Data Staged",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        },
+        {
+          "id": "T1048",
+          "name": "Exfiltration Over Alternative Protocol",
+          "tactics": [
+            "Exfiltration"
+          ]
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactics": [
+            "Impact"
+          ]
+        },
+        {
+          "id": "T1490",
+          "name": "Inhibit System Recovery",
+          "tactics": [
+            "Impact"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0008",
+      "asset_name": "Database Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0009",
+      "asset_name": "Content Management Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "Initial Access"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0010",
+      "asset_name": "Instant Messaging Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0011",
+      "asset_name": "Proxy Server",
+      "threats": [
+        {
+          "id": "T1090",
+          "name": "Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1090.001",
+          "name": "Internal Proxy",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1071",
+          "name": "Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1102",
+          "name": "Web Services",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1572",
+          "name": "Protocol Tunneling",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1573",
+          "name": "Encrypted Channel",
+          "tactics": [
+            "Command and Control"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0012",
+      "asset_name": "Name Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0013",
+      "asset_name": "Network Firewall",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0014",
+      "asset_name": "Network Router",
+      "threats": [
+        {
+          "id": "T1071",
+          "name": "Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1095",
+          "name": "Non-Application Layer Protocol",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1132",
+          "name": "Data Encoding",
+          "tactics": [
+            "Command and Control"
+          ]
+        },
+        {
+          "id": "T1018",
+          "name": "Remote System Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1046",
+          "name": "Network Service Scanning",
+          "tactics": [
+            "Discovery"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0015",
+      "asset_name": "Network Switch",
+      "threats": [
+        {
+          "id": "T1040",
+          "name": "Network Sniffing",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1557",
+          "name": "Man-in-the-Middle",
+          "tactics": [
+            "Credential Access"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0016",
+      "asset_name": "Network Management Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0017",
+      "asset_name": "Software Distribution Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0018",
+      "asset_name": "Virtualization Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0019",
+      "asset_name": "Cloud Environment",
+      "threats": [
+        {
+          "id": "T1584",
+          "name": "Compromise Infrastructure",
+          "tactics": [
+            "Resource Development"
+          ]
+        },
+        {
+          "id": "T1610",
+          "name": "Deploy Container",
+          "tactics": [
+            "Stealth",
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1686",
+          "name": "Disable or Modify System Firewall",
+          "tactics": [
+            "Defense Impairment"
+          ]
+        },
+        {
+          "id": "T1686.003",
+          "name": "Windows Host Firewall",
+          "tactics": [
+            "Defense Impairment"
+          ]
+        },
+        {
+          "id": "T1059.003",
+          "name": "Windows Command Shell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1074.001",
+          "name": "Local Data Staging",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1567",
+          "name": "Exfiltration Over Web Service",
+          "tactics": [
+            "Exfiltration"
+          ]
+        },
+        {
+          "id": "T1561.001",
+          "name": "Disk Content Wipe",
+          "tactics": [
+            "Impact"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0020",
+      "asset_name": "Backup Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0021",
+      "asset_name": "Log / SIEM Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0022",
+      "asset_name": "Print Server",
+      "threats": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "Initial Access",
+            "Persistence",
+            "Stealth",
+            "Privilege Escalation"
+          ]
+        },
+        {
+          "id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1047",
+          "name": "Windows Management Instrumentation",
+          "tactics": [
+            "Execution"
+          ]
+        },
+        {
+          "id": "T1083",
+          "name": "File and Directory Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1135",
+          "name": "Network Share Discovery",
+          "tactics": [
+            "Discovery"
+          ]
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "Credential Access"
+          ]
+        },
+        {
+          "id": "T1005",
+          "name": "Data From Local System",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactics": [
+            "Collection"
+          ]
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactics": [
+            "Exfiltration"
+          ]
+        }
+      ]
+    },
+    {
+      "asset_id": "A0023",
+      "asset_name": "Terminal Server",
+      "threats": [
+        {
+          "id": "T1021.001",
+          "name": "Remote Desktop Protocol",
+          "tactics": [
+            "Lateral Movement"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "Execution"
+          ]
+        }
+      ]
+    }
+  ]
+}

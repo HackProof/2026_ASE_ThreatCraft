@@ -1,0 +1,212 @@
+[
+  {
+    "asset_id": "A0001",
+    "asset_name": "Workstation",
+    "safety": "Moderate",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Moderate",
+    "score": 3
+  },
+  {
+    "asset_id": "A0002",
+    "asset_name": "Human-Machine Interface (HMI)",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0003",
+    "asset_name": "Programmable Logic Controller (PLC)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "A0004",
+    "asset_name": "Remote Terminal Unit (RTU)",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "A0005",
+    "asset_name": "Intelligent Electronic Device (IED)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "A0006",
+    "asset_name": "Data Historian",
+    "safety": "Moderate",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0007",
+    "asset_name": "Control Server",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0008",
+    "asset_name": "Application Server",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0009",
+    "asset_name": "Data Gateway",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0010",
+    "asset_name": "Safety Controller",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "A0011",
+    "asset_name": "Virtual Private Network (VPN) Server",
+    "safety": "Moderate",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "A0012",
+    "asset_name": "Jump Host",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "A0013",
+    "asset_name": "Field I/O",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "A0014",
+    "asset_name": "Routers",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Moderate",
+    "score": 3
+  },
+  {
+    "asset_id": "A0015",
+    "asset_name": "Switch",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Moderate",
+    "score": 3
+  },
+  {
+    "asset_id": "A0016",
+    "asset_name": "Firewall",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "A0017",
+    "asset_name": "Distributed Control System (DCS) Controller",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "A0018",
+    "asset_name": "Programmable Automation Controller (PAC)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "E3",
+    "asset_name": "Physical Power Distribution Process",
+    "asset_type": "external_entity",
+    "case_id": "C0028",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4,
+    "mitre_impact_techniques": [
+      {
+        "id": "T0831",
+        "name": "Manipulation of Control",
+        "tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "id": "T0826",
+        "name": "Loss of Availability",
+        "tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "id": "T0827",
+        "name": "Loss of Control",
+        "tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "id": "T0828",
+        "name": "Loss of Productivity and Revenue",
+        "tactics": [
+          "Impact"
+        ]
+      },
+      {
+        "id": "T0813",
+        "name": "Denial of Control",
+        "tactics": [
+          "Impact"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,434 @@
+[
+  {
+    "asset_id": "Asset_01",
+    "asset_name": "HMI",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_02",
+    "asset_name": "IVI System",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_03",
+    "asset_name": "TCU",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_04",
+    "asset_name": "Gateway",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_05",
+    "asset_name": "Diagnostics Module",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_06",
+    "asset_name": "AD ECU",
+    "safety": "Severe",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Moderate",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_07",
+    "asset_name": "OTA Module",
+    "safety": "Moderate",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_08",
+    "asset_name": "Transmission Control Module (TCM)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_09",
+    "asset_name": "Engine Control Module (ECM)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_10",
+    "asset_name": "Body Control Module (BCM)",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_11",
+    "asset_name": "Chassis Control Module (CCM)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_12",
+    "asset_name": "Airbag Control Unit",
+    "safety": "Severe",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_13",
+    "asset_name": "Battery Management Module (BMM)",
+    "safety": "Major",
+    "financial": "Severe",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_14",
+    "asset_name": "Logger",
+    "safety": "Negligible",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_15",
+    "asset_name": "SafeMonitor",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_16",
+    "asset_name": "Sensor Fusion ECU",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_17",
+    "asset_name": "Transmission Park Position Sensor",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_18",
+    "asset_name": "Automatic Transmission (AT) System",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_19",
+    "asset_name": "Accelerator Pedal Module",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_20",
+    "asset_name": "Engine System",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_21",
+    "asset_name": "Door",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Moderate",
+    "privacy": "Negligible",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_22",
+    "asset_name": "Tyre Pressure Monitoring System (TPMS)",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Negligible",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_23",
+    "asset_name": "Electronic Parking Brake (EPB) System",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_24",
+    "asset_name": "Brake Pedal Module",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_25",
+    "asset_name": "Electric Power Steering (EPS)",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_26",
+    "asset_name": "Collision Detection Sensor",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Negligible",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_27",
+    "asset_name": "Airbag",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_28",
+    "asset_name": "Safety Belt Pretensioner",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Negligible",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_29",
+    "asset_name": "Battery Pack",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_30",
+    "asset_name": "Camera",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_31",
+    "asset_name": "Radar",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Moderate",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_32",
+    "asset_name": "LiDAR",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Moderate",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_33",
+    "asset_name": "GPS",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_34",
+    "asset_name": "USB",
+    "safety": "Major",
+    "financial": "Moderate",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_35",
+    "asset_name": "OBD-II",
+    "safety": "Negligible",
+    "financial": "Moderate",
+    "operational": "Negligible",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_36",
+    "asset_name": "Firmware Update Server",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_37",
+    "asset_name": "Firmware Data Store",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_38",
+    "asset_name": "Environment",
+    "safety": "Negligible",
+    "financial": "Negligible",
+    "operational": "Negligible",
+    "privacy": "Negligible",
+    "score": 1
+  },
+  {
+    "asset_id": "Asset_39",
+    "asset_name": "V2V Interconnected Car",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_40",
+    "asset_name": "Wifi Access Point",
+    "safety": "Moderate",
+    "financial": "Moderate",
+    "operational": "Moderate",
+    "privacy": "Moderate",
+    "score": 2
+  },
+  {
+    "asset_id": "Asset_41",
+    "asset_name": "ACC ECU",
+    "safety": "Severe",
+    "financial": "Severe",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_42",
+    "asset_name": "ADAS",
+    "safety": "Severe",
+    "financial": "Severe",
+    "operational": "Severe",
+    "privacy": "Major",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_43",
+    "asset_name": "LK A ECU",
+    "safety": "Severe",
+    "financial": "Severe",
+    "operational": "Severe",
+    "privacy": "Negligible",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_44",
+    "asset_name": "Web Server",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_45",
+    "asset_name": "Web Application",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_46",
+    "asset_name": "V2X DSC",
+    "safety": "Severe",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Major",
+    "score": 3
+  },
+  {
+    "asset_id": "Asset_47",
+    "asset_name": "Maps Update Server",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Major",
+    "privacy": "Severe",
+    "score": 4
+  },
+  {
+    "asset_id": "Asset_48",
+    "asset_name": "Web Service",
+    "safety": "Major",
+    "financial": "Major",
+    "operational": "Severe",
+    "privacy": "Severe",
+    "score": 4
+  }
+]

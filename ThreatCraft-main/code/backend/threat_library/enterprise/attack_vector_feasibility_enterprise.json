@@ -1,0 +1,4078 @@
+[
+  {
+    "id": "T1001",
+    "name": "Data Obfuscation",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1003",
+    "name": "OS Credential Dumping",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.001",
+    "name": "LSASS Memory",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.002",
+    "name": "Security Account Manager",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.003",
+    "name": "NTDS",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.004",
+    "name": "LSA Secrets",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.005",
+    "name": "Cached Domain Credentials",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.006",
+    "name": "DCSync",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.007",
+    "name": "Proc Filesystem",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1003.008",
+    "name": "/etc/passwd and /etc/shadow",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1005",
+    "name": "Data From Local System",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1006",
+    "name": "Direct Volume Access",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1007",
+    "name": "System Service Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1008",
+    "name": "Fallback Channels",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1010",
+    "name": "Application Window Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1011",
+    "name": "Exfiltration Over Other Network Medium",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1011.001",
+    "name": "Exfiltration Over Bluetooth",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote",
+      "adjacent",
+      "physical"
+    ],
+    "feasibility": "low"
+  },
+  {
+    "id": "T1012",
+    "name": "Query Registry",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1014",
+    "name": "Rootkit",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1016",
+    "name": "System Network Configuration Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1016.002",
+    "name": "Wi-Fi Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local",
+      "adjacent"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1018",
+    "name": "Remote System Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1020",
+    "name": "Automated Exfiltration",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1020.001",
+    "name": "Traffic Duplication",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1021",
+    "name": "Remote Services",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1021.001",
+    "name": "Remote Desktop Protocol",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1021.002",
+    "name": "SMB/Windows Admin Shares",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1021.003",
+    "name": "Distributed Component Object Model",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1021.004",
+    "name": "SSH",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1025",
+    "name": "Data from Removable Media",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "physical"
+    ],
+    "feasibility": "low"
+  },
+  {
+    "id": "T1027",
+    "name": "Obfuscated Files or Information",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1029",
+    "name": "Scheduled Transfer",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1030",
+    "name": "Data Transfer Size Limits",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1033",
+    "name": "System Owner/User Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1036",
+    "name": "Masquerading: Match Legitimate name or Location",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1037",
+    "name": "Boot or Logon Initialization Scripts",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1037.001",
+    "name": "Logon Script (Windows)",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1037.002",
+    "name": "Logon Script (Mac)",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1037.003",
+    "name": "Network Logon Script",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1037.004",
+    "name": "Rc.common",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1037.005",
+    "name": "Startup Items",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1039",
+    "name": "Data from Network Shared Drive",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1040",
+    "name": "Network Sniffing",
+    "tactics": [
+      "Discovery",
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1041",
+    "name": "Exfiltration Over C2 Channel",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1046",
+    "name": "Network Service Scanning",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1047",
+    "name": "Windows Management Instrumentation",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1048",
+    "name": "Exfiltration Over Alternative Protocol",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1049",
+    "name": "System Network Connections Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1052",
+    "name": "Exfiltration Over Physical Medium",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote",
+      "physical"
+    ],
+    "feasibility": "low"
+  },
+  {
+    "id": "T1053",
+    "name": "Scheduled Task/Job",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation",
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1053.002",
+    "name": "At (Windows)",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation",
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1053.004",
+    "name": "Launchd",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation",
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1053.005",
+    "name": "Scheduled Task",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation",
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055",
+    "name": "Process Injection",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.001",
+    "name": "Dynamic-link Library Injection",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.002",
+    "name": "Portable Executable Injection",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.003",
+    "name": "Thread Execution Hijacking",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.004",
+    "name": "Asynchronous Procedure Call",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.005",
+    "name": "Thread Local Storage",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.008",
+    "name": "Ptrace System Calls",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.009",
+    "name": "Proc Memory",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.011",
+    "name": "Extra Window Memory Injection",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.012",
+    "name": "Process Hollowing",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.013",
+    "name": "Process Doppelgänging",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1055.014",
+    "name": "VDSO Hijacking",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1056",
+    "name": "Input Capture",
+    "tactics": [
+      "Credential Access",
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1056.002",
+    "name": "GUI Input Capture",
+    "tactics": [
+      "Credential Access",
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1056.003",
+    "name": "Web Portal Capture",
+    "tactics": [
+      "Credential Access",
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1057",
+    "name": "Process Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1059",
+    "name": "Command and Scripting Interpreter",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1059.001",
+    "name": "PowerShell",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1059.003",
+    "name": "Windows Command Shell",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1059.004",
+    "name": "Unix Shell",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1059.008",
+    "name": "Network Device CLI",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1068",
+    "name": "Exploitation for privilege escalation",
+    "tactics": [
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1069",
+    "name": "Permission Groups Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1069.002",
+    "name": "Domain Groups",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1070",
+    "name": "Indicator Removal on Host",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1070.003",
+    "name": "Clear Command History",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1070.004",
+    "name": "File Deletion",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1070.005",
+    "name": "Network Share Connection Removal",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1070.006",
+    "name": "Timestomp",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1071",
+    "name": "Application Layer Protocol",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1072",
+    "name": "Software Deployment Tools",
+    "tactics": [
+      "Execution",
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1074",
+    "name": "Data Staged",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1074.001",
+    "name": "Local Data Staging",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1078",
+    "name": "Valid Accounts",
+    "tactics": [
+      "Initial Access",
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1078.001",
+    "name": "Default Accounts",
+    "tactics": [
+      "Initial Access",
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1078.002",
+    "name": "Domain Accounts",
+    "tactics": [
+      "Initial Access",
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1078.003",
+    "name": "Local Accounts",
+    "tactics": [
+      "Initial Access",
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1078.004",
+    "name": "Cloud Accounts",
+    "tactics": [
+      "Initial Access",
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1080",
+    "name": "Taint Shared Content",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1082",
+    "name": "System Information Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1083",
+    "name": "File and Directory Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1087",
+    "name": "Account Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1087.004",
+    "name": "Cloud Account",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1090",
+    "name": "Proxy",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1090.001",
+    "name": "Internal Proxy",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote",
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1091",
+    "name": "Replication Through Removable Media",
+    "tactics": [
+      "Initial Access",
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote",
+      "physical"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1092",
+    "name": "Communication Through Removable Media",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote",
+      "physical"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1095",
+    "name": "Non-Application Layer Protocol",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1098",
+    "name": "Account Manipulation",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1098.001",
+    "name": "Additional Cloud Credentials",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1098.004",
+    "name": "SSH Authorized Keys",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1102",
+    "name": "Web Services",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1104",
+    "name": "Multi-Stage Channels",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1105",
+    "name": "Ingress Tool Transfer",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1106",
+    "name": "Native API",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1110",
+    "name": "Brute Force",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1110.001",
+    "name": "Password Guessing",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1110.002",
+    "name": "Password Cracking",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1110.003",
+    "name": "Password Spraying",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1110.004",
+    "name": "Credential Stuffing",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1111",
+    "name": "Two-Factor Authentication Interception",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1112",
+    "name": "Modify Registry",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1113",
+    "name": "Screen Capture",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1114",
+    "name": "Email Collection",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1114.001",
+    "name": "Local Email Collection",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1115",
+    "name": "Clipboard Data",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1119",
+    "name": "Automated Collection",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1120",
+    "name": "Peripheral Device Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1123",
+    "name": "Audio Capture",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1124",
+    "name": "System Time Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1125",
+    "name": "Video Capture",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1127",
+    "name": "Trusted Developer Utilities Proxy Execution",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1129",
+    "name": "Shared Modules",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1132",
+    "name": "Data Encoding",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1133",
+    "name": "External Remote Services",
+    "tactics": [
+      "Initial Access",
+      "Persistence"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1134",
+    "name": "Access Token Manipulation",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1134.003",
+    "name": "Make and Impersonate Token",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1135",
+    "name": "Network Share Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1136",
+    "name": "Create Account",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1136.001",
+    "name": "Local Account",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1136.002",
+    "name": "Domain Account",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1136.003",
+    "name": "Cloud Account",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1137",
+    "name": "Office Application Startup",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1140",
+    "name": "Deobfuscate/Decode Files or Information",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1176",
+    "name": "Browser Extensions",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1185",
+    "name": "Man in the Browser",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1187",
+    "name": "Forced Authentication",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1189",
+    "name": "Drive-by Compromise",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1190",
+    "name": "Exploit Public-Facing Application",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1195",
+    "name": "Supply Chain Compromise",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1197",
+    "name": "BITS Jobs",
+    "tactics": [
+      "Persistence",
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1199",
+    "name": "Trusted Relationship",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1200",
+    "name": "Hardware Additions",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote",
+      "physical"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1201",
+    "name": "Password Policy Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1202",
+    "name": "Indirect Command Execution",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1203",
+    "name": "Exploitation for Client Execution",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1204",
+    "name": "User Execution",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1204.002",
+    "name": "Malicious File",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1205",
+    "name": "Traffic Signaling",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1205.002",
+    "name": "Socket Filters",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1207",
+    "name": "Rogue Domain Controller",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1210",
+    "name": "Exploitation of Remote Services",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1211",
+    "name": "Exploitation for Defense Evasion",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1212",
+    "name": "Exploitation for Credential Access",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1213",
+    "name": "Data from Information Repositories",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1213.001",
+    "name": "Confluence",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1213.002",
+    "name": "Sharepoint",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1216",
+    "name": "Signed Script Proxy Execution",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1217",
+    "name": "Browser Bookmark Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1218",
+    "name": "Signed Binary Proxy Execution",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1219",
+    "name": "Remote Access Software",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1220",
+    "name": "XSL Script Processing",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1221",
+    "name": "Template Injection",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1222",
+    "name": "File and Directory Permissions Modification",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1480",
+    "name": "Execution Guardrails",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1482",
+    "name": "Domain Trust Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1484",
+    "name": "Domain Policy Modification",
+    "tactics": [
+      "Defense Impairment",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1485",
+    "name": "Data Destruction",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1486",
+    "name": "Data Encrypted for Impact",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1489",
+    "name": "Service Stop",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1490",
+    "name": "Inhibit System Recovery",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1491",
+    "name": "Defacement",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1495",
+    "name": "Firmware Corruption",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1496",
+    "name": "Resource Hijacking",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1497",
+    "name": "Virtualization/Sandbox Evasion",
+    "tactics": [
+      "Stealth",
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1498",
+    "name": "Network Denial of Service",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1498.001",
+    "name": "Direct Network Flood",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1498.002",
+    "name": "Reflection Amplification",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1499",
+    "name": "Endpoint Denial of Service",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1499.001",
+    "name": "OS Exhaustion Flood",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1499.002",
+    "name": "Service Exhaustion Flood",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1499.003",
+    "name": "Application Exhaustion Flood",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1499.004",
+    "name": "Application or System Exploitation",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1505",
+    "name": "Server Software Component",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1505.001",
+    "name": "SQL Stored Procedures",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1505.002",
+    "name": "Transport Agent",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1505.003",
+    "name": "Web Shell",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1518",
+    "name": "Software Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1525",
+    "name": "Implant Container Image",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1526",
+    "name": "Cloud Service Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1528",
+    "name": "Steal Application Access Token",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1529",
+    "name": "System Shutdown/Reboot",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1530",
+    "name": "Data from Cloud Storage Object",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1531",
+    "name": "Account Access Removal",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1534",
+    "name": "Internal Spearphishing",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1535",
+    "name": "Unused/Unsupported Cloud Regions",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1537",
+    "name": "Transfer Data to Cloud Account",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1538",
+    "name": "Cloud Service Dashboard",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1539",
+    "name": "Steal Web Session Cookie",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1542",
+    "name": "Pre-OS Boot",
+    "tactics": [
+      "Persistence",
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1543",
+    "name": "Create or modify System Process",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1543.001",
+    "name": "Launch Agent",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1543.002",
+    "name": "Systemd Service",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1543.003",
+    "name": "Windows Service",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1543.004",
+    "name": "Launch Daemon",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546",
+    "name": "Event Triggered Execution",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.003",
+    "name": "Windows Management Instrumentation Event Subscription",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.007",
+    "name": "Netsh Helper DLL",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.008",
+    "name": "Accessibility Features",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.009",
+    "name": "AppCert DLLs",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.010",
+    "name": "AppInit DLLs",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.011",
+    "name": "Application Shimming",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.012",
+    "name": "Image File Execution Options Injection",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1546.014",
+    "name": "Emond",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547",
+    "name": "Boot or Logon Autostart Execution",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.002",
+    "name": "Authentication Package",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.003",
+    "name": "Time Providers",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.004",
+    "name": "Winlogon Helper DLL",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.005",
+    "name": "Security Support Provider",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.006",
+    "name": "Kernel Modules and Extensions",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.008",
+    "name": "LSASS Driver",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.010",
+    "name": "Port Monitors",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.012",
+    "name": "Print Processors",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1547.014",
+    "name": "Active Setup",
+    "tactics": [
+      "Persistence",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1548",
+    "name": "Abuse Elevation Control Mechanism",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1548.001",
+    "name": "Setuid and Setgid",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1548.003",
+    "name": "Sudo and Sudo Caching",
+    "tactics": [
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1550",
+    "name": "Use Alternate Authentication Material",
+    "tactics": [
+      "Stealth",
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1550.001",
+    "name": "Application Access Token",
+    "tactics": [
+      "Stealth",
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1550.004",
+    "name": "Web Session Cookie",
+    "tactics": [
+      "Stealth",
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1552",
+    "name": "Unsecured Credentials",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1552.005",
+    "name": "Cloud Instance Metadata API",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1553",
+    "name": "Subvert Trust Controls",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1553.001",
+    "name": "Gatekeeper Bypass",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1553.003",
+    "name": "SIP and Trust Provider Hijacking",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1553.004",
+    "name": "Install Root Certificate",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1554",
+    "name": "Compromise Client Software Binary",
+    "tactics": [
+      "Persistence"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1555",
+    "name": "Credentials from Password Stores",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1555.001",
+    "name": "Keychain",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1555.002",
+    "name": "Securityd Memory",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1555.003",
+    "name": "Credentials from Web Browsers",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1555.004",
+    "name": "Windows Credential Manager",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1556",
+    "name": "Modify Authentication Process",
+    "tactics": [
+      "Defense Impairment",
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1556.001",
+    "name": "Domain Controller Authentication",
+    "tactics": [
+      "Defense Impairment",
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1556.003",
+    "name": "Pluggable Authentication Modules",
+    "tactics": [
+      "Defense Impairment",
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1556.004",
+    "name": "Network Device Authentication",
+    "tactics": [
+      "Defense Impairment",
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1556.007",
+    "name": "Hybrid Identity",
+    "tactics": [
+      "Defense Impairment",
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1557",
+    "name": "Man-in-the-Middle",
+    "tactics": [
+      "Credential Access",
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1558",
+    "name": "Steal or Forge Kerberos Tickets",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1558.001",
+    "name": "Golden Ticket",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1558.002",
+    "name": "Silver Ticket",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1558.003",
+    "name": "Kerberoasting",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1558.004",
+    "name": "AS-REP Roasting",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1559",
+    "name": "Inter-Process Communication",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1560",
+    "name": "Archive Collected Data",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1560.001",
+    "name": "Archive via Utility",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1560.003",
+    "name": "Archive via Custom Method",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1561",
+    "name": "Disk Wipe",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1561.001",
+    "name": "Disk Content Wipe",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1562",
+    "name": "Impair Defenses: Disable or Modify System Firewall",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1562.009",
+    "name": "Safe Mode Boot",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1563",
+    "name": "Remote Service Session Hijacking",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1563.001",
+    "name": "SSH Hijacking",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1563.002",
+    "name": "RDP Hijacking",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1564",
+    "name": "Hide Artifacts",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1564.002",
+    "name": "Hidden Users",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1565",
+    "name": "Data Manipulation",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1565.001",
+    "name": "Stored Data Manipulation",
+    "tactics": [
+      "Impact"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1566",
+    "name": "Phishing",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1566.001",
+    "name": "Spearphishing Attachment",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1567",
+    "name": "Exfiltration Over Web Service",
+    "tactics": [
+      "Exfiltration"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1568",
+    "name": "Dynamic Resolution",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1569",
+    "name": "System Services",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1569.002",
+    "name": "Service Execution",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1570",
+    "name": "Lateral Tool Transfer",
+    "tactics": [
+      "Lateral Movement"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1571",
+    "name": "Non-Standard Port",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1572",
+    "name": "Protocol Tunneling",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1573",
+    "name": "Encrypted Channel",
+    "tactics": [
+      "Command and Control"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1574",
+    "name": "Hijack Execution Flow",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.005",
+    "name": "Executable Installer File Permissions Weakness",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.006",
+    "name": "LD_PRELOAD",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.007",
+    "name": "Path Interception by PATH Environment Variable",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.008",
+    "name": "Path Interception by Search Order Hijacking",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.009",
+    "name": "Path Interception by Unquoted Path",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.010",
+    "name": "Services File Permissions Weakness",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.011",
+    "name": "Services Registry Permissions Weakness",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1574.012",
+    "name": "COR_PROFILER",
+    "tactics": [
+      "Persistence",
+      "Stealth",
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1578",
+    "name": "Modify Cloud Compute Infrastructure",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1580",
+    "name": "Cloud Infrastructure Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1583",
+    "name": "Acquire Infrastructure",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1584",
+    "name": "Compromise Infrastructure",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1585",
+    "name": "Establish Accounts",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1586",
+    "name": "Compromise Accounts",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1586.001",
+    "name": "Social Media Accounts",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1586.002",
+    "name": "Email Accounts",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1587",
+    "name": "Develop Capabilities",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1588",
+    "name": "Obtain Capabilities",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1589",
+    "name": "Gather Victim Identity Information",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1589.001",
+    "name": "Credentials",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1589.002",
+    "name": "Email Addresses",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1589.003",
+    "name": "Employee Names",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590",
+    "name": "Gather Victim Network Information",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590.001",
+    "name": "Domain Properties",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590.002",
+    "name": "DNS",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590.003",
+    "name": "Network Trust Dependencies",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590.004",
+    "name": "Network Topology",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590.005",
+    "name": "IP Addresses",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1590.006",
+    "name": "Network Security Appliances",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1591",
+    "name": "Gather Victim Org Information",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1591.001",
+    "name": "Determine Physical Locations",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1591.002",
+    "name": "Business Relationships",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1591.003",
+    "name": "Identify Business Tempo",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1591.004",
+    "name": "Identify Roles",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1592",
+    "name": "Gather Victim Host Information",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1592.001",
+    "name": "Hardware",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1592.002",
+    "name": "Software",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1592.003",
+    "name": "Firmware",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1592.004",
+    "name": "Client Configurations",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1593",
+    "name": "Search Open Websites/Domains",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1594",
+    "name": "Search Victim-Owned Websites",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1595",
+    "name": "Active Scanning",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1595.001",
+    "name": "Scanning IP Blocks",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1595.002",
+    "name": "Vulnerability Scanning",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1596",
+    "name": "Search Open Technical Databases",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1596.001",
+    "name": "DNS/Passive DNS",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1596.002",
+    "name": "WHOIS",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1596.003",
+    "name": "Digital Certificates",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1596.004",
+    "name": "CDNs",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1596.005",
+    "name": "Scan Databases",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1597",
+    "name": "Search Closed Sources",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1597.001",
+    "name": "Threat Intel Vendors",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1598",
+    "name": "Phishing for Information",
+    "tactics": [
+      "Reconnaissance"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1599",
+    "name": "Network Boundary Bridging",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1600",
+    "name": "Weaken Encryption",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1601",
+    "name": "Modify System Image",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1602",
+    "name": "Data from Configuration Repository",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1602.001",
+    "name": "SNMP (MIB Dump)",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1602.002",
+    "name": "Network Device Configuration Dump",
+    "tactics": [
+      "Collection"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1606",
+    "name": "Forge Web Credentials",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1608",
+    "name": "Stage Capabilities",
+    "tactics": [
+      "Resource Development"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1609",
+    "name": "Container Administration Command",
+    "tactics": [
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1610",
+    "name": "Deploy Container",
+    "tactics": [
+      "Stealth",
+      "Execution"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1611",
+    "name": "Escape to Host",
+    "tactics": [
+      "Privilege Escalation"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1612",
+    "name": "Build Image on Host",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1613",
+    "name": "Container and Resource Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1614",
+    "name": "System Location Discovery",
+    "tactics": [],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1615",
+    "name": "Group Policy Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1619",
+    "name": "Cloud Storage Object Discovery",
+    "tactics": [
+      "Discovery"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "high"
+  },
+  {
+    "id": "T1620",
+    "name": "Reflective Code Loading",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1621",
+    "name": "Multi-Factor Authentication Request Generation",
+    "tactics": [],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1622",
+    "name": "Debugger Evasion",
+    "tactics": [],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1647",
+    "name": "Plist File Modification",
+    "tactics": [
+      "Stealth"
+    ],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1648",
+    "name": "Serverless Execution",
+    "tactics": [],
+    "attack_vector": [
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1649",
+    "name": "Steal or Forge Authentication Certificates",
+    "tactics": [
+      "Credential Access"
+    ],
+    "attack_vector": [
+      "remote"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1669",
+    "name": "Wi-Fi Networks",
+    "tactics": [
+      "Initial Access"
+    ],
+    "attack_vector": [
+      "remote",
+      "adjacent"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1686",
+    "name": "Disable or Modify System Firewall",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "remote",
+      "local"
+    ],
+    "feasibility": "medium"
+  },
+  {
+    "id": "T1686.003",
+    "name": "Windows Host Firewall",
+    "tactics": [
+      "Defense Impairment"
+    ],
+    "attack_vector": [
+      "remote",
+      "local"
+    ],
+    "feasibility": "medium"
+  }
+]

@@ -1,0 +1,882 @@
+[
+  {
+    "type": "ASSET_CLASS_MAP",
+    "description": "Asset ID to class mapping",
+    "classes": {
+      "IT_HOST": [
+        "A0001",
+        "A0006",
+        "A0007",
+        "A0008",
+        "A0012"
+      ],
+      "OT_HMI": [
+        "A0002"
+      ],
+      "OT_CONTROLLER": [
+        "A0003",
+        "A0004",
+        "A0005",
+        "A0010",
+        "A0017",
+        "A0018"
+      ],
+      "FIELD_IO": [
+        "A0013"
+      ],
+      "NETWORK": [
+        "A0009",
+        "A0011",
+        "A0014",
+        "A0015",
+        "A0016"
+      ]
+    }
+  },
+  {
+    "type": "THREAT_ASSET_COMPAT",
+    "description": "Compatible asset classes per threat. Mechanically derived from asset_to_threats_ics.json.",
+    "compat": {
+      "T0800": [
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0801": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0802": [
+        "IT_HOST",
+        "OT_CONTROLLER"
+      ],
+      "T0806": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER"
+      ],
+      "T0807": [
+        "IT_HOST",
+        "OT_HMI",
+        "NETWORK"
+      ],
+      "T0809": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0811": [
+        "IT_HOST"
+      ],
+      "T0814": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0816": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0817": [
+        "IT_HOST"
+      ],
+      "T0819": [
+        "IT_HOST",
+        "NETWORK"
+      ],
+      "T0820": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0821": [
+        "OT_CONTROLLER"
+      ],
+      "T0822": [
+        "IT_HOST",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0823": [
+        "IT_HOST",
+        "OT_HMI",
+        "NETWORK"
+      ],
+      "T0830": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0834": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0835": [
+        "OT_CONTROLLER"
+      ],
+      "T0836": [
+        "OT_CONTROLLER"
+      ],
+      "T0838": [
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0840": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0842": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0843": [
+        "OT_CONTROLLER"
+      ],
+      "T0843.001": [
+        "OT_CONTROLLER"
+      ],
+      "T0843.002": [
+        "OT_CONTROLLER"
+      ],
+      "T0843.003": [
+        "OT_CONTROLLER"
+      ],
+      "T0845": [
+        "OT_CONTROLLER"
+      ],
+      "T0846": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0846.001": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0846.002": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0846.003": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0847": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0848": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0849": [
+        "IT_HOST",
+        "OT_HMI",
+        "NETWORK"
+      ],
+      "T0851": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0852": [
+        "IT_HOST",
+        "OT_HMI"
+      ],
+      "T0853": [
+        "IT_HOST",
+        "OT_HMI",
+        "NETWORK"
+      ],
+      "T0858": [
+        "OT_CONTROLLER"
+      ],
+      "T0859": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0860": [
+        "IT_HOST",
+        "FIELD_IO"
+      ],
+      "T0861": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0862": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0863": [
+        "IT_HOST",
+        "OT_HMI"
+      ],
+      "T0864": [
+        "IT_HOST"
+      ],
+      "T0865": [
+        "IT_HOST"
+      ],
+      "T0866": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0867": [
+        "IT_HOST",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0868": [
+        "OT_CONTROLLER"
+      ],
+      "T0869": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0871": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0872": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0873": [
+        "IT_HOST"
+      ],
+      "T0873.001": [
+        "IT_HOST"
+      ],
+      "T0874": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0877": [
+        "OT_CONTROLLER"
+      ],
+      "T0878": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0881": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0883": [
+        "IT_HOST",
+        "NETWORK"
+      ],
+      "T0884": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0885": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0886": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0887": [
+        "IT_HOST",
+        "FIELD_IO"
+      ],
+      "T0888": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T0889": [
+        "OT_CONTROLLER"
+      ],
+      "T0890": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0892": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T0893": [
+        "IT_HOST",
+        "OT_HMI",
+        "NETWORK"
+      ],
+      "T0894": [
+        "IT_HOST",
+        "OT_HMI"
+      ],
+      "T0895": [
+        "IT_HOST",
+        "OT_HMI"
+      ],
+      "T1691": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO"
+      ],
+      "T1691.001": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO"
+      ],
+      "T1691.002": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T1692": [
+        "IT_HOST",
+        "OT_CONTROLLER"
+      ],
+      "T1692.001": [
+        "IT_HOST",
+        "OT_CONTROLLER"
+      ],
+      "T1692.002": [
+        "IT_HOST",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T1693": [
+        "OT_CONTROLLER"
+      ],
+      "T1693.001": [
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "NETWORK"
+      ],
+      "T1693.002": [
+        "OT_CONTROLLER"
+      ],
+      "T1694": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T1694.001": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T1694.002": [
+        "FIELD_IO"
+      ],
+      "T1695": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T1695.001": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T1695.002": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ],
+      "T1695.003": [
+        "IT_HOST",
+        "OT_HMI",
+        "OT_CONTROLLER",
+        "FIELD_IO",
+        "NETWORK"
+      ]
+    }
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "ia_gate",
+    "description": "IA techniques at non-entry nodes require a lateral movement gateway (T0866/T0848/T0886/T0822) from the prior node.",
+    "bypass_at_entry": true,
+    "enables": [
+      "T0847",
+      "T0848",
+      "T0862",
+      "T0886",
+      "T0822"
+    ],
+    "requires_one_of": [
+      "T0866",
+      "T0848",
+      "T0886",
+      "T0822"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "t0866_lm_gate",
+    "description": "Exploitation of Remote Services (T0866) as a lateral-movement technique at non-entry nodes requires a prior execution foothold or existing T0866 access.",
+    "bypass_at_entry": true,
+    "enables": [
+      "T0866"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895",
+      "T0866"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "it_exec_req_ia",
+    "description": "IT execution techniques require a prior Initial Access technique on an upstream node.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0807",
+      "T0823",
+      "T0853",
+      "T0863",
+      "T0895"
+    ],
+    "requires_one_of": [
+      "T0847",
+      "T0848",
+      "T0860",
+      "T0862",
+      "T0864",
+      "T0865",
+      "T0866",
+      "T0822",
+      "T0883",
+      "T0886"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "ot_exec_req_foothold",
+    "description": "OT-native execution (Native API, Hooking) requires an established OT foothold such as controller tasking access or protocol-level control.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0834",
+      "T0874"
+    ],
+    "requires_one_of": [
+      "T0871",
+      "T1692",
+      "T1692.001",
+      "T1692.002",
+      "T1691",
+      "T1691.001",
+      "T1691.002",
+      "T0836"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "ot_tasking",
+    "description": "Modify Controller Tasking (T0871) requires prior direct OT access via exploitation (T0866) or rogue master (T0848).",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0871"
+    ],
+    "requires_one_of": [
+      "T0866",
+      "T0848"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "ics_proto_req_access",
+    "description": "ICS protocol message attacks (T1692, T1691) require prior direct OT device access via T0866 or T0848.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T1692",
+      "T1691"
+    ],
+    "requires_one_of": [
+      "T0866",
+      "T0848"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "t1692_sub_req_parent",
+    "description": "T1692 sub-techniques (Command/Reporting Message) require the parent T1692 to be present on an upstream node first.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T1692.001",
+      "T1692.002"
+    ],
+    "requires_one_of": [
+      "T1692"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "t1691_sub_req_parent",
+    "description": "T1691 sub-techniques (Block Command/Reporting) require the parent T1691 to be present on an upstream node first.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T1691.001",
+      "T1691.002"
+    ],
+    "requires_one_of": [
+      "T1691"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "firmware_req_tasking",
+    "description": "Firmware modification (T1693) requires prior controller tasking access (T0871).",
+    "bypass_at_entry": false,
+    "enables": [
+      "T1693",
+      "T1693.001",
+      "T1693.002"
+    ],
+    "requires_one_of": [
+      "T0871"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "io_req_ot",
+    "description": "I/O image modification (T0836) requires prior OT tasking or protocol-level control.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0836"
+    ],
+    "requires_one_of": [
+      "T0871",
+      "T1692",
+      "T1692.001",
+      "T1692.002"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "bf_io_req_io",
+    "description": "Brute Force I/O (T0806) requires prior I/O image access or tasking.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0806"
+    ],
+    "requires_one_of": [
+      "T0871",
+      "T0836"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "cred_req_exec",
+    "description": "Credential access and persistence techniques require a prior execution foothold.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0859",
+      "T1694",
+      "T1694.001",
+      "T1694.002",
+      "T0873",
+      "T0873.001"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "disc_req_exec",
+    "description": "Discovery techniques require a prior execution foothold to run enumeration tools.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0840",
+      "T0842",
+      "T0846",
+      "T0846.001",
+      "T0846.002",
+      "T0846.003",
+      "T0861",
+      "T0888"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "de_req_exec",
+    "description": "Defense evasion techniques require a prior execution foothold.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0820",
+      "T0849",
+      "T0851",
+      "T0858",
+      "T0872",
+      "T0894"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "c2_req_exec",
+    "description": "Command and Control channel establishment requires a prior execution foothold.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0869",
+      "T0884",
+      "T0885"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "coll_req_exec",
+    "description": "Collection techniques require a prior execution foothold to run data gathering tools.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0801",
+      "T0802",
+      "T0811",
+      "T0830",
+      "T0845",
+      "T0852",
+      "T0861",
+      "T0878",
+      "T0887",
+      "T0893"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "inhibit_req_ctrl",
+    "description": "Inhibit Response Function and Impair Process Control techniques require a prior execution foothold or established OT protocol-level control.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0800",
+      "T0809",
+      "T0814",
+      "T0816",
+      "T0835",
+      "T0838",
+      "T0868",
+      "T0877",
+      "T0878",
+      "T0881",
+      "T0890",
+      "T0892",
+      "T1695",
+      "T1695.001",
+      "T1695.002",
+      "T1695.003"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0871",
+      "T0874",
+      "T1692",
+      "T1692.001",
+      "T1692.002",
+      "T1691",
+      "T1691.001",
+      "T1691.002",
+      "T0836"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "privesc_req_exec",
+    "description": "Privilege escalation requires a prior execution foothold.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0890"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "lateral_tool_req_exec",
+    "description": "Lateral Tool Transfer (T0867) requires a prior execution foothold to stage tools.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0867"
+    ],
+    "requires_one_of": [
+      "T0807",
+      "T0823",
+      "T0834",
+      "T0853",
+      "T0863",
+      "T0871",
+      "T0874",
+      "T0895"
+    ]
+  },
+  {
+    "type": "THREAT_CHAIN",
+    "id": "impact_req_ot_control",
+    "description": "Physical impact on ICS targets (Loss of Control, Loss of Safety, etc.) requires a prior OT execution-level technique: controller tasking access, I/O manipulation, ICS protocol attacks, or firmware modification.",
+    "bypass_at_entry": false,
+    "enables": [
+      "T0831",
+      "T0826",
+      "T0827",
+      "T0828",
+      "T0813"
+    ],
+    "requires_one_of": [
+      "T0871",
+      "T0836",
+      "T0806",
+      "T1692",
+      "T1692.001",
+      "T1692.002",
+      "T1691",
+      "T1691.001",
+      "T1691.002",
+      "T1693.001",
+      "T0838"
+    ]
+  }
+]

@@ -1,0 +1,1389 @@
+[
+  {
+    "type": "ASSET_CLASS_MAP",
+    "description": "Enterprise asset ID to coarse asset class mapping",
+    "classes": {
+      "ENDPOINT": [
+        "A0001",
+        "A0023",
+        "A0022"
+      ],
+      "IDENTITY_ACCESS": [
+        "A0005",
+        "A0006",
+        "A0004"
+      ],
+      "DATA_STORAGE": [
+        "A0008",
+        "A0007",
+        "A0020",
+        "A0009"
+      ],
+      "COMMUNICATION": [
+        "A0003",
+        "A0010",
+        "A0011",
+        "A0012",
+        "A0002"
+      ],
+      "NETWORK": [
+        "A0013",
+        "A0014",
+        "A0015",
+        "A0016"
+      ],
+      "PLATFORM_MANAGEMENT": [
+        "A0017",
+        "A0018",
+        "A0019",
+        "A0021"
+      ]
+    }
+  },
+  {
+    "type": "THREAT_ASSET_COMPAT",
+    "description": "Compatible enterprise asset classes per threat, derived from relevant_for mappings.",
+    "compat": {
+      "T1001": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.003": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.004": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.005": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.006": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1003.007": [
+        "ENDPOINT"
+      ],
+      "T1003.008": [
+        "ENDPOINT"
+      ],
+      "T1005": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1006": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1007": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1008": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1010": [
+        "ENDPOINT"
+      ],
+      "T1011": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1011.001": [
+        "ENDPOINT"
+      ],
+      "T1012": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1014": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1016": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1018": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1020": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1020.001": [
+        "NETWORK"
+      ],
+      "T1021": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1021.002": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1021.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1021.004": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1025": [
+        "ENDPOINT"
+      ],
+      "T1027": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1029": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1030": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1033": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1036": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1037": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1037.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1037.002": [
+        "ENDPOINT"
+      ],
+      "T1037.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1037.004": [
+        "ENDPOINT"
+      ],
+      "T1037.005": [
+        "ENDPOINT"
+      ],
+      "T1039": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1040": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1041": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1046": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1047": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1048": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1049": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1052": [
+        "ENDPOINT"
+      ],
+      "T1053": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1053.002": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1053.004": [
+        "ENDPOINT"
+      ],
+      "T1053.005": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1055": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.004": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.005": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.008": [
+        "ENDPOINT"
+      ],
+      "T1055.009": [
+        "ENDPOINT"
+      ],
+      "T1055.011": [
+        "ENDPOINT"
+      ],
+      "T1055.012": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1055.013": [
+        "ENDPOINT"
+      ],
+      "T1055.014": [
+        "ENDPOINT"
+      ],
+      "T1056": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1056.002": [
+        "ENDPOINT"
+      ],
+      "T1056.003": [
+        "COMMUNICATION"
+      ],
+      "T1057": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1059": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1059.001": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1059.004": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1059.008": [
+        "NETWORK"
+      ],
+      "T1068": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1069": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1069.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1070": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1070.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1070.004": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1070.005": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1070.006": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1071": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1072": [
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1074": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1078": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1078.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1078.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1078.003": [
+        "ENDPOINT"
+      ],
+      "T1078.004": [
+        "COMMUNICATION",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1080": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1082": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1083": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1087": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1087.004": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1090": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1091": [
+        "ENDPOINT"
+      ],
+      "T1092": [
+        "ENDPOINT"
+      ],
+      "T1095": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1098": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1098.001": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1098.004": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1102": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1104": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1105": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1106": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1110": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1110.001": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1110.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1110.003": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1110.004": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1111": [
+        "ENDPOINT"
+      ],
+      "T1112": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1113": [
+        "ENDPOINT"
+      ],
+      "T1114": [
+        "COMMUNICATION"
+      ],
+      "T1114.001": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1115": [
+        "ENDPOINT"
+      ],
+      "T1119": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1120": [
+        "ENDPOINT"
+      ],
+      "T1123": [
+        "ENDPOINT"
+      ],
+      "T1124": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1125": [
+        "ENDPOINT"
+      ],
+      "T1127": [
+        "ENDPOINT"
+      ],
+      "T1129": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1132": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1133": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1134": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1134.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1135": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1136": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1136.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1136.002": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1136.003": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1137": [
+        "ENDPOINT"
+      ],
+      "T1140": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1176": [
+        "ENDPOINT"
+      ],
+      "T1185": [
+        "ENDPOINT"
+      ],
+      "T1187": [
+        "ENDPOINT"
+      ],
+      "T1189": [
+        "ENDPOINT"
+      ],
+      "T1190": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1195": [
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1197": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1199": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1200": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1201": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1202": [
+        "ENDPOINT"
+      ],
+      "T1203": [
+        "ENDPOINT"
+      ],
+      "T1204": [
+        "ENDPOINT"
+      ],
+      "T1204.002": [
+        "ENDPOINT"
+      ],
+      "T1205": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1205.002": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1207": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1210": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1211": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1212": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1213": [
+        "COMMUNICATION",
+        "DATA_STORAGE"
+      ],
+      "T1213.001": [
+        "COMMUNICATION",
+        "DATA_STORAGE"
+      ],
+      "T1213.002": [
+        "DATA_STORAGE"
+      ],
+      "T1216": [
+        "ENDPOINT"
+      ],
+      "T1217": [
+        "ENDPOINT"
+      ],
+      "T1218": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1219": [
+        "ENDPOINT"
+      ],
+      "T1220": [
+        "ENDPOINT"
+      ],
+      "T1221": [
+        "ENDPOINT"
+      ],
+      "T1222": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1480": [
+        "ENDPOINT"
+      ],
+      "T1482": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1484": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1485": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1486": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1489": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1490": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1491": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1495": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1496": [
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1497": [
+        "ENDPOINT"
+      ],
+      "T1498": [
+        "COMMUNICATION",
+        "NETWORK"
+      ],
+      "T1498.001": [
+        "NETWORK"
+      ],
+      "T1498.002": [
+        "NETWORK"
+      ],
+      "T1499": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1499.001": [
+        "ENDPOINT"
+      ],
+      "T1499.002": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1499.003": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1499.004": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1505": [
+        "COMMUNICATION",
+        "DATA_STORAGE"
+      ],
+      "T1505.001": [
+        "DATA_STORAGE"
+      ],
+      "T1505.002": [
+        "COMMUNICATION"
+      ],
+      "T1505.003": [
+        "COMMUNICATION"
+      ],
+      "T1518": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1525": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1526": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1528": [
+        "ENDPOINT"
+      ],
+      "T1529": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1530": [
+        "DATA_STORAGE",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1531": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1534": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1535": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1537": [
+        "DATA_STORAGE",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1538": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1539": [
+        "ENDPOINT"
+      ],
+      "T1542": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1543": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1543.001": [
+        "ENDPOINT"
+      ],
+      "T1543.002": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1543.003": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1543.004": [
+        "ENDPOINT"
+      ],
+      "T1546": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1546.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1546.007": [
+        "ENDPOINT"
+      ],
+      "T1546.008": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1546.009": [
+        "ENDPOINT"
+      ],
+      "T1546.010": [
+        "ENDPOINT"
+      ],
+      "T1546.011": [
+        "ENDPOINT"
+      ],
+      "T1546.012": [
+        "ENDPOINT"
+      ],
+      "T1546.014": [
+        "ENDPOINT"
+      ],
+      "T1547": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1547.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1547.003": [
+        "ENDPOINT"
+      ],
+      "T1547.004": [
+        "ENDPOINT"
+      ],
+      "T1547.005": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1547.006": [
+        "ENDPOINT"
+      ],
+      "T1547.008": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1547.010": [
+        "ENDPOINT"
+      ],
+      "T1547.012": [
+        "ENDPOINT"
+      ],
+      "T1547.014": [
+        "ENDPOINT"
+      ],
+      "T1548": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1548.001": [
+        "ENDPOINT"
+      ],
+      "T1548.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1550": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1550.001": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1550.004": [
+        "COMMUNICATION"
+      ],
+      "T1552": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1552.005": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1553": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1553.001": [
+        "ENDPOINT"
+      ],
+      "T1553.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1553.004": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "NETWORK"
+      ],
+      "T1554": [
+        "ENDPOINT"
+      ],
+      "T1555": [
+        "ENDPOINT"
+      ],
+      "T1555.001": [
+        "ENDPOINT"
+      ],
+      "T1555.002": [
+        "ENDPOINT"
+      ],
+      "T1555.003": [
+        "ENDPOINT"
+      ],
+      "T1556": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "NETWORK"
+      ],
+      "T1556.001": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1556.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1556.004": [
+        "NETWORK"
+      ],
+      "T1556.007": [
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1557": [
+        "NETWORK"
+      ],
+      "T1558": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1558.001": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1558.002": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1558.003": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1558.004": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1559": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1560": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1560.001": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1560.003": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1561": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1562": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1562.009": [
+        "ENDPOINT"
+      ],
+      "T1563": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1563.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1563.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1564": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1564.002": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1565": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1565.001": [
+        "DATA_STORAGE"
+      ],
+      "T1567": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1568": [
+        "COMMUNICATION",
+        "ENDPOINT"
+      ],
+      "T1569": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1569.002": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1570": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1571": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1572": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1573": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1574": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1574.005": [
+        "ENDPOINT"
+      ],
+      "T1574.006": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1574.007": [
+        "ENDPOINT"
+      ],
+      "T1574.008": [
+        "ENDPOINT"
+      ],
+      "T1574.009": [
+        "ENDPOINT"
+      ],
+      "T1574.010": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1574.011": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1574.012": [
+        "ENDPOINT"
+      ],
+      "T1578": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1580": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1583": [
+        "PRE_COMPROMISE"
+      ],
+      "T1584": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "NETWORK",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1585": [
+        "PRE_COMPROMISE"
+      ],
+      "T1586": [
+        "PRE_COMPROMISE"
+      ],
+      "T1586.001": [
+        "PRE_COMPROMISE"
+      ],
+      "T1586.002": [
+        "PRE_COMPROMISE"
+      ],
+      "T1587": [
+        "PRE_COMPROMISE"
+      ],
+      "T1588": [
+        "PRE_COMPROMISE"
+      ],
+      "T1589": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1589.001": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1589.002": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1589.003": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1590": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1590.001": [
+        "COMMUNICATION"
+      ],
+      "T1590.002": [
+        "COMMUNICATION"
+      ],
+      "T1590.003": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1590.004": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1590.005": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1590.006": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1591": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1591.001": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1591.002": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1591.003": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1591.004": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1592": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1592.001": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1592.002": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1592.003": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1592.004": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1593": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1594": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1595": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1595.001": [
+        "NETWORK"
+      ],
+      "T1595.002": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1596": [
+        "PRE_COMPROMISE"
+      ],
+      "T1596.001": [
+        "PRE_COMPROMISE"
+      ],
+      "T1596.002": [
+        "PRE_COMPROMISE"
+      ],
+      "T1596.003": [
+        "PRE_COMPROMISE"
+      ],
+      "T1596.004": [
+        "PRE_COMPROMISE"
+      ],
+      "T1596.005": [
+        "PRE_COMPROMISE"
+      ],
+      "T1597": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1597.001": [
+        "COMMUNICATION",
+        "IDENTITY_ACCESS"
+      ],
+      "T1598": [
+        "COMMUNICATION",
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1600": [
+        "NETWORK"
+      ],
+      "T1601": [
+        "NETWORK"
+      ],
+      "T1602": [
+        "NETWORK"
+      ],
+      "T1602.001": [
+        "NETWORK"
+      ],
+      "T1602.002": [
+        "NETWORK"
+      ],
+      "T1608": [
+        "PRE_COMPROMISE"
+      ],
+      "T1609": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1610": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1611": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1612": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1613": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1619": [
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1620": [
+        "ENDPOINT"
+      ],
+      "T1647": [
+        "ENDPOINT"
+      ],
+      "T1649": [
+        "IDENTITY_ACCESS"
+      ],
+      "T1555.004": [
+        "ENDPOINT"
+      ],
+      "T1059.003": [
+        "DATA_STORAGE",
+        "ENDPOINT",
+        "IDENTITY_ACCESS",
+        "PLATFORM_MANAGEMENT"
+      ],
+      "T1074.001": [
+        "DATA_STORAGE",
+        "ENDPOINT"
+      ],
+      "T1686": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1686.003": [
+        "ENDPOINT"
+      ],
+      "T1561.001": [
+        "ENDPOINT"
+      ],
+      "T1090.001": [
+        "ENDPOINT",
+        "NETWORK"
+      ],
+      "T1021.001": [
+        "ENDPOINT",
+        "IDENTITY_ACCESS"
+      ],
+      "T1016.002": [
+        "ENDPOINT"
+      ],
+      "T1669": [
+        "ENDPOINT",
+        "NETWORK"
+      ]
+    }
+  }
+]
