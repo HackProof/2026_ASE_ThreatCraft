@@ -402,6 +402,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **Seungjoo Kim (Corresponding Author)** — Professor, Korea University, School of Cybersecurity (skim71@korea.ac.kr)
 - **Dohee Kang (First author)** — M.S. course, Korea University, School of Cybersecurity (kangdohee1211@korea.ac.kr)
-- **Geunwoo Baek (Third author)** - M.S, Korea University, School of Cybersecurity (sinse100@korea.ac.kr) 
+- **Jiwon Kwak (Second Author)** — Ph.D. course, Korea University, School of Cybersecurity (jwkwak4031@korea.ac.kr)
+- **Geunwoo Baek (Third Author)** — M.S, Korea University, School of Cybersecurity (sinse100@korea.ac.kr) 
 - **Our Lab** — [Security Automation aNd Engineering Lab (SANE Lab)](https://sites.google.com/view/seceng/home)
 ---
