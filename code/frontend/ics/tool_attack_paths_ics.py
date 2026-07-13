@@ -3,40 +3,25 @@
 
 from __future__ import annotations
 
-def _ensure_packages():
-    import importlib, subprocess, sys, threading
-
-    REQUIRED = [
-
-        ("google.genai",  "google-genai",  ""),
-        ("openai",        "openai",        ""),
-    ]
-
-    def _pip_install(pkg):
-        try:
-            subprocess.check_call(
-                [sys.executable, "-m", "pip", "install", "--quiet", pkg],
-                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-            )
-        except Exception:
-            pass  
-
+def _ensure_packages() -> None:
     missing = []
-    for import_name, pip_pkg, _ in REQUIRED:
-        try:
-            importlib.import_module(import_name)
-        except ImportError:
-            missing.append(pip_pkg)
+
+    try:
+        import openai  # noqa: F401
+    except ImportError:
+        missing.append("openai")
+
+    try:
+        from google import genai  # noqa: F401
+    except ImportError:
+        missing.append("google-genai")
 
     if missing:
-       
-        threads = [threading.Thread(target=_pip_install, args=(p,), daemon=True)
-                   for p in missing]
-        for t in threads:
-            t.start()
+        raise RuntimeError(
+            "Required packages are missing: "
+            + ", ".join(missing)
+        )
 
-        for t in threads:
-            t.join(timeout=60)
 
 _ensure_packages()
 
@@ -1467,23 +1452,41 @@ class FullResultWindow(tk.Toplevel):
                 messagebox.showinfo(
                     "Info",
                     "Generated report HTML path is empty.",
-                    parent=self
+                    parent=self,
                 )
                 return
 
-            if not Path(self._report_html_path).exists():
+            report_path = Path(self._report_html_path).resolve()
+
+            if not report_path.exists():
                 messagebox.showinfo(
                     "Info",
-                    f"Generated report HTML file not found.\n\nPath:\n{self._report_html_path}",
-                    parent=self
+                    f"Generated report HTML file not found.\n\n"
+                    f"Path:\n{report_path}",
+                    parent=self,
                 )
                 return
-
+    
             try:
-                import os
-                os.startfile(self._report_html_path)
-            except Exception as e:
-                messagebox.showerror("Error", str(e), parent=self)
+                import webbrowser
+
+                opened = webbrowser.open(
+                    report_path.as_uri(),
+                    new=2,
+                )
+
+                if not opened:
+                    raise RuntimeError(
+                        "No browser could be launched for the generated report."
+                    )
+
+            except Exception as exc:
+                messagebox.showerror(
+                    "Error",
+                    f"Failed to open report:\n{exc}\n\n"
+                    f"Report path:\n{report_path}",
+                parent=self,
+            )
 
         bkw2 = dict(font=("Arial",9,"bold"), relief="flat", bd=0, padx=12, pady=4, cursor="hand2")
         tk.Button(
