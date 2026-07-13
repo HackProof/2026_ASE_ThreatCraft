@@ -1,0 +1,7 @@
+graphviz
+Pillow
+openai
+google-genai
+
+# PDF 보고서 생성을 위한 선택 의존성
+weasyprint

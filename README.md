@@ -269,6 +269,50 @@ python tool_attack_paths.py</code></pre>
 </ol>
 
 <p align="justify">
+  However, if <b>ThreatCraft</b> cannot be executed properly due to software dependency or local environment configuration issues, it can also be executed using <b>Docker</b>.
+</p>
+
+<ol start="5">
+  <li>
+    <b>Install WSL2 on Windows</b><br/>
+    If you are running ThreatCraft on Windows, install WSL2 first. Open <b>Windows PowerShell as Administrator</b> and run:
+    <pre><code>wsl --install</code></pre>
+    After the WSL2 installation is complete, restart the system if required.
+  </li>
+
+  <li>
+    <b>Install Docker Desktop</b><br/>
+    Download and install Docker Desktop for Windows from the official Docker website:<br/>
+    https://docs.docker.com/desktop/setup/install/windows-install/<br/><br/>
+    After installation, launch <b>Docker Desktop</b> and keep it running.
+  </li>
+
+  <li>
+    <b>Move to the ThreatCraft artifact directory</b><br/>
+    Open Windows PowerShell and move to the root directory of the extracted ThreatCraft artifact.
+  </li>
+
+  <li>
+    <b>Build the Docker environment</b><br/>
+    Run the following command:
+    <pre><code>docker compose build</code></pre>
+  </li>
+
+  <li>
+    <b>Run ThreatCraft in the Docker environment</b><br/>
+    Run the following command:
+    <pre><code>docker compose up -d</code></pre>
+  </li>
+
+  <li>
+    <b>Access ThreatCraft through a web browser</b><br/>
+    After the container starts successfully, open the following URL in a web browser:
+    <pre><code>http://localhost:6080/vnc.html?autoconnect=1&amp;resize=scale</code></pre>
+  </li>
+</ol>
+
+
+<p align="justify">
   Once executed successfully, the system will launch the ThreatCraft and the GUI will be displayed on your screen.
 </p>
 
@@ -394,14 +438,14 @@ The tool evaluates the most critical vulnerabilities within each asset in the ag
 
 ## ⚖️ License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.text).
 
 ---
 
 ## ✉️ Contact
 
 - **Seungjoo Kim (Corresponding Author)** — Professor, Korea University, School of Cybersecurity (skim71@korea.ac.kr)
-- **Dohee Kang (First author)** — M.S. course, Korea University, School of Cybersecurity (kangdohee1211@korea.ac.kr)
+- **Dohee Kang (First Author)** — M.S. course, Korea University, School of Cybersecurity (kangdohee1211@korea.ac.kr)
 - **Jiwon Kwak (Second Author)** — Ph.D. course, Korea University, School of Cybersecurity (jwkwak4031@korea.ac.kr)
 - **Geunwoo Baek (Third Author)** — M.S, Korea University, School of Cybersecurity (sinse100@korea.ac.kr) 
 - **Our Lab** — [Security Automation aNd Engineering Lab (SANE Lab)](https://sites.google.com/view/seceng/home)
