@@ -20,6 +20,8 @@ The repository also provides example files that can be used to test the tool and
 
 ## Justification for Artifacts Reusable
 
-ThreatCraft is organized as a reusable software artifact. Its source code, example files, and domain-specific threat libraries are provided in a structured form, allowing future users to inspect, modify, and extend the artifact.
+ThreatCraft is organized as a reusable software artifact. Its domain-specific threat libraries are structured under `code/backend/threat_library/`, where assets, threats, and related mappings for each domain are managed in a modular form.
 
-The threat libraries and example inputs can be adapted to additional domains or case studies. Therefore, the artifact can support further research and practical use beyond the evaluation cases described in the paper.
+Users can update or extend the artifact by adding new assets, threats, or mappings to these library files. Because the threat libraries are written in widely used JSON formats, they can be easily inspected, modified, and reused without changing the core implementation. 
+
+In addition, new domains can be supported by adding or modifying the corresponding domain-specific library files. This structure allows ThreatCraft to be reused not only for the evaluation cases described in the paper, but also for additional systems, domains, and threat analysis scenarios.

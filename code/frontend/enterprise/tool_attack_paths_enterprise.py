@@ -26,7 +26,7 @@ def _ensure_packages() -> None:
 _ensure_packages()
 
 
-import argparse, csv, io, json, sys, threading, traceback
+import argparse, csv, io, json, os, sys, threading, traceback
 import tkinter as tk
 from collections import defaultdict
 from datetime import datetime
@@ -901,9 +901,20 @@ class _AutosecBaseAgent:
 
         for attempt in range(max_retries):
             try:
-                resp = self._oc.chat.completions.create(
-                    model=self.model, messages=msgs,
-                    max_tokens=16384, temperature=0.1)
+                request_kwargs = {
+                    "model": self.model,
+                    "messages": msgs,
+                    "max_tokens": 16384,
+                    "temperature": 0 if self.provider == "ollama" else 0.1,
+                }
+
+                if self.provider == "ollama":
+                    request_kwargs["response_format"] = {
+                        "type": "json_object"
+                    }
+
+                resp = self._oc.chat.completions.create(**request_kwargs)
+
                 choice  = resp.choices[0]
                 text    = (choice.message.content or "").strip()
                 reason  = getattr(choice, "finish_reason", "stop") or "stop"
@@ -968,13 +979,48 @@ class _AutosecBaseAgent:
    
     def send_and_parse(self, user_msg: str) -> dict:
         raw = self.send(user_msg)
-        raw = self._re.sub(r"^```json\s*", "", raw, flags=self._re.MULTILINE)
-        raw = self._re.sub(r"^```\s*$",    "", raw, flags=self._re.MULTILINE)
+
+        if raw is None or not raw.strip():
+            raise RuntimeError(
+                f"{self.provider.upper()} returned an empty response. "
+                "The model may have exceeded its context or output limit."
+            )
+
         raw = raw.strip()
+
+        # Markdown 코드 블록 제거
+        raw = self._re.sub(
+            r"^```(?:json)?\s*",
+            "",
+            raw,
+            flags=self._re.IGNORECASE,
+        )
+        raw = self._re.sub(r"\s*```$", "", raw)
+
+        # JSON 앞뒤에 설명이 붙은 경우 JSON 객체 부분만 추출
+        first_brace = raw.find("{")
+        last_brace = raw.rfind("}")
+
+        if first_brace >= 0 and last_brace > first_brace:
+            raw = raw[first_brace:last_brace + 1]
+
         try:
             return self._json.loads(raw)
-        except self._json.JSONDecodeError:
-            return self._json.loads(self._repair(raw))
+        except self._json.JSONDecodeError as first_error:
+            repaired = self._repair(raw)
+
+            try:
+                return self._json.loads(repaired)
+            except self._json.JSONDecodeError as second_error:
+                preview = raw[:500].replace("\n", " ")
+
+                raise RuntimeError(
+                    "The model returned invalid JSON.\n"
+                    f"Response preview: {preview}\n"
+                    f"Initial parse error: {first_error}\n"
+                    f"Repair parse error: {second_error}"
+                ) from second_error
+
 
     def run(self, **kwargs) -> dict:
         raise NotImplementedError
@@ -2628,15 +2674,15 @@ class AttackPathsGUI(tk.Tk):
             defaults = {
                 "gemini": "gemini-3.1-flash-lite-preview",
                 "gpt":    "gpt-4o",
-                "ollama": "llama3.8",
+                "ollama": os.getenv("OLLAMA_MODEL", "llama3.1:8b"),
             }
             prov = self.v_ai_provider.get()
             self.v_ai_model.set(defaults.get(prov, ""))
             r
             if prov == "ollama":
                 _lbl_api_key.config(text="Base URL")
-                _hint_model.config(text="e.g. llama3.8")
-                _lbl_key_hint.config(text="leave blank → localhost:11434")
+                _hint_model.config(text="e.g. llama3.1:8b")
+                _lbl_key_hint.config(text="blank → compose.yaml setting")
             elif prov == "gpt":
                 _lbl_api_key.config(text="AI API Key")
                 _hint_model.config(text="e.g. gpt-4o / gpt-4-turbo")
@@ -2744,9 +2790,16 @@ class AttackPathsGUI(tk.Tk):
 
          
             elif provider == "ollama":
-                model    = model or "llama3.8"
-                base_url = key if key else "http://localhost:11434"
-        
+                model = model or os.getenv(
+                    "OLLAMA_MODEL",
+                    "llama3.1:8b",
+                )
+
+                base_url = key or os.getenv(
+                    "OLLAMA_BASE_URL",
+                    "http://localhost:11434/v1/",
+                )
+
                 if not base_url.rstrip("/").endswith("/v1"):
                     base_url = base_url.rstrip("/") + "/v1"
                 try:
@@ -3207,9 +3260,13 @@ class AttackPathsGUI(tk.Tk):
             enriched_nodes.append(n)
         enriched_result["nodes"] = enriched_nodes
 
-        llm_api_key = self.v_llm_api_key.get().strip()
 
-        if llm_api_key:
+        llm_api_key = self.v_llm_api_key.get().strip()
+        provider = self.v_ai_provider.get().strip()
+
+        should_run_ai = provider == "ollama" or bool(llm_api_key)
+
+        if should_run_ai:
             self._set_progress("Running AI Analysis...", 50)
             self._log("[INFO] Asset mapping complete. Starting AI analysis with enriched asset data...")
             _call_gemini_direct = getattr(self, "_call_gemini_direct_fn", None)
@@ -3788,8 +3845,16 @@ class AttackPathsGUI(tk.Tk):
             _oai_client = _OAI(api_key=llm_api_key)
 
         elif provider == "ollama":
-            user_model = user_model or "llama3.8"
-            base_url   = llm_api_key if llm_api_key else "http://localhost:11434"
+            user_model = user_model or os.getenv(
+                "OLLAMA_MODEL",
+                "llama3.1:8b",
+            )
+
+            base_url = llm_api_key or os.getenv(
+                "OLLAMA_BASE_URL",
+                "http://localhost:11434/v1/",
+            )
+
             if not base_url.rstrip("/").endswith("/v1"):
                 base_url = base_url.rstrip("/") + "/v1"
             try:
@@ -3896,6 +3961,23 @@ class AttackPathsGUI(tk.Tk):
             return r
         
         summary = _compact(result_data)
+        # Local Ollama models receive a limited number of paths
+        # to prevent context and output-length exhaustion.
+        if provider == "ollama":
+            ollama_path_limit = 5
+            original_path_count = len(summary.get("paths", []))
+
+            if original_path_count > ollama_path_limit:
+                summary["paths"] = summary["paths"][:ollama_path_limit]
+                summary["meta"]["total_paths"] = len(summary["paths"])
+
+                self.after(
+                    0,
+                    lambda: self._log(
+                        f"[INFO] Ollama local analysis limited to "
+                        f"{ollama_path_limit} of {original_path_count} paths."
+                    ),
+                )
 
         def _make_log(msg):
             self.after(0, lambda m=msg: self._log(m))

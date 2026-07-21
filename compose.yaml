@@ -17,6 +17,8 @@ services:
       SCREEN_GEOMETRY: "1600x1000x24"
       TZ: "Asia/Seoul"
       BROWSER: "firefox-esr"
+      OLLAMA_BASE_URL: "http://ollama:11434/v1/"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-llama3.1:8b}"
 
     volumes:
       # 사용자가 분석할 TM7 파일 및 기타 입력 파일
@@ -28,4 +30,47 @@ services:
     # Firefox나 큰 그래프를 표시할 때 공유 메모리 부족 방지
     shm_size: "1gb"
 
+    depends_on:
+      ollama:
+        condition: service_healthy
+      ollama-model-pull:
+        condition: service_completed_successfully
+
     restart: unless-stopped
+
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: threatcraft-ollama
+
+    volumes:
+      # 다운로드한 모델을 컨테이너 재생성 후에도 유지
+      - ollama_data:/root/.ollama
+
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+    restart: unless-stopped
+
+  ollama-model-pull:
+    image: ollama/ollama:latest
+    container_name: threatcraft-ollama-model-pull
+
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+    environment:
+      OLLAMA_HOST: "http://ollama:11434"
+
+    entrypoint: ["/bin/ollama"]
+    command: ["pull", "${OLLAMA_MODEL:-llama3.1:8b}"]
+
+    restart: "no"
+
+
+volumes:
+  ollama_data:

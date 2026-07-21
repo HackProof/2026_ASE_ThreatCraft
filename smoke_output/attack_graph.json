@@ -1,0 +1,828 @@
+{
+  "ok": true,
+  "mode": "remote",
+  "target_asset_name": "Door",
+  "boundary_name": "External Vehicle Boundary",
+  "tm7_path": "C:\\Users\\SANE01\\Downloads\\ThreatCraft-main (4)\\ThreatCraft-main\\example\\Automotive_DFD.tm7",
+  "nodes": [
+    {
+      "node_id": "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "asset_guid": "d0670c30-af48-41b5-97fa-74bd9e49efb6",
+      "asset_name": "Telematics Server",
+      "stencil_type": "StencilParallelLines",
+      "phase": "Entry",
+      "threat_id": null,
+      "threat_name": null,
+      "tactic": null
+    },
+    {
+      "node_id": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "asset_guid": "6fcd03b4-7101-49f4-8915-c1bb9349e6de",
+      "asset_name": "TCU",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_24",
+      "threat_name": "Malicious SMS",
+      "phase": "In",
+      "tactic": "Initial Access"
+    },
+    {
+      "node_id": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "asset_guid": "6fcd03b4-7101-49f4-8915-c1bb9349e6de",
+      "asset_name": "TCU",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_40",
+      "threat_name": "External Remote Services",
+      "phase": "In",
+      "tactic": "Initial Access"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_88",
+      "threat_name": "Network Sniffing",
+      "phase": "Through",
+      "tactic": "Credential Access"
+    },
+    {
+      "node_id": "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact",
+      "asset_guid": "a8820ccf-1189-4a07-9f83-eff024c2f212",
+      "asset_name": "Door",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_165",
+      "threat_name": "Vehicle Theft",
+      "phase": "Out",
+      "tactic": "Impact"
+    },
+    {
+      "node_id": "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "asset_guid": "84a780e4-1782-4f47-89c6-4a7784d26a91",
+      "asset_name": "Smart Phone",
+      "stencil_type": "StencilRectangle",
+      "phase": "Entry",
+      "threat_id": null,
+      "threat_name": null,
+      "tactic": null
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_63",
+      "threat_name": "Exploit Co-Located Computing Device for Privilege Escalation",
+      "phase": "Through",
+      "tactic": "Privilege Escalation"
+    },
+    {
+      "node_id": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "asset_guid": "dd03bf0c-89d6-423a-84bb-18753c23b416",
+      "asset_name": "Body Control Module (BCM)",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_109",
+      "threat_name": "Exploit ECU for Lateral Movement",
+      "phase": "Through",
+      "tactic": "Lateral Movement"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_116",
+      "threat_name": "Remote services in In-Vehicle Network",
+      "phase": "Through",
+      "tactic": "Lateral Movement"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_88",
+      "threat_name": "Network Sniffing",
+      "phase": "Through",
+      "tactic": "Discovery"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_108",
+      "threat_name": "Bridge Vehicle Networks",
+      "phase": "Through",
+      "tactic": "Lateral Movement"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_115",
+      "threat_name": "Exploitation of Remote Services in In-Vehicle Network",
+      "phase": "Through",
+      "tactic": "Lateral Movement"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_62",
+      "threat_name": "Abuse Elevation Control Mechanism",
+      "phase": "Through",
+      "tactic": "Privilege Escalation"
+    },
+    {
+      "node_id": "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function",
+      "asset_guid": "a8820ccf-1189-4a07-9f83-eff024c2f212",
+      "asset_name": "Door",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_153",
+      "threat_name": "Control Doors",
+      "phase": "Out",
+      "tactic": "Affect Vehicle Function"
+    },
+    {
+      "node_id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "asset_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+      "asset_name": "Gateway",
+      "stencil_type": "StencilEllipse",
+      "threat_id": "Threat_98",
+      "threat_name": "Network Service Scanning",
+      "phase": "Through",
+      "tactic": "Discovery"
+    }
+  ],
+  "edges": [
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "to": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "dfd_flow_guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+      "dfd_flow_label": "B-CAN data"
+    },
+    {
+      "from": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "to": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dfd_flow_guid": "b61fdc08-11e4-4014-b325-956083b607be",
+      "dfd_flow_label": "CAN"
+    },
+    {
+      "from": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "to": "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dfd_flow_guid": "b61fdc08-11e4-4014-b325-956083b607be",
+      "dfd_flow_label": "CAN"
+    },
+    {
+      "from": "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "to": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "dfd_flow_guid": "6e015ab5-3b2b-4779-98c0-85706d3b52d0",
+      "dfd_flow_label": "Call/SMS"
+    },
+    {
+      "from": "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "to": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "dfd_flow_guid": "6e015ab5-3b2b-4779-98c0-85706d3b52d0",
+      "dfd_flow_label": "Call/SMS"
+    },
+    {
+      "from": "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "to": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "dfd_flow_guid": "932dacbe-a48f-4038-a846-1d9b317f0e67",
+      "dfd_flow_label": "Telematic data"
+    },
+    {
+      "from": "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "to": "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "dfd_flow_guid": "932dacbe-a48f-4038-a846-1d9b317f0e67",
+      "dfd_flow_label": "Telematic data"
+    },
+    {
+      "from": "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "to": "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function",
+      "dfd_flow_guid": "a21422fc-7dd5-4cb4-89c7-4f1b9b007fca",
+      "dfd_flow_label": "Lock / Unlock operation"
+    }
+  ],
+  "paths": [
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_153::Out::Affect Vehicle Function"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_98::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Discovery",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_62::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_63::Through::Privilege Escalation",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_88::Through::Credential Access",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_108::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_115::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_24::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ],
+    [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91::ENTRY",
+      "6fcd03b4-7101-49f4-8915-c1bb9349e6de::Threat_40::In::Initial Access",
+      "3fa9915a-486c-4d3d-b246-1d38c2f6e586::Threat_116::Through::Lateral Movement",
+      "dd03bf0c-89d6-423a-84bb-18753c23b416::Threat_109::Through::Lateral Movement",
+      "a8820ccf-1189-4a07-9f83-eff024c2f212::Threat_165::Out::Impact"
+    ]
+  ],
+  "merged_dfd_subgraph": {
+    "dfd_nodes": [
+      {
+        "guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+        "name": "Gateway",
+        "stencil_type": "StencilEllipse",
+        "left": 387.0,
+        "top": 267.0,
+        "width": 100.0,
+        "height": 100.0
+      },
+      {
+        "guid": "6fcd03b4-7101-49f4-8915-c1bb9349e6de",
+        "name": "TCU",
+        "stencil_type": "StencilEllipse",
+        "left": 888.0,
+        "top": 483.0,
+        "width": 100.0,
+        "height": 100.0
+      },
+      {
+        "guid": "84a780e4-1782-4f47-89c6-4a7784d26a91",
+        "name": "Smart Phone",
+        "stencil_type": "StencilRectangle",
+        "left": 837.0,
+        "top": 746.0,
+        "width": 100.0,
+        "height": 100.0
+      },
+      {
+        "guid": "a8820ccf-1189-4a07-9f83-eff024c2f212",
+        "name": "Door",
+        "stencil_type": "StencilEllipse",
+        "left": 703.0,
+        "top": 27.0,
+        "width": 100.0,
+        "height": 100.0
+      },
+      {
+        "guid": "d0670c30-af48-41b5-97fa-74bd9e49efb6",
+        "name": "Telematics Server",
+        "stencil_type": "StencilParallelLines",
+        "left": 1120.0,
+        "top": 769.0,
+        "width": 100.0,
+        "height": 100.0
+      },
+      {
+        "guid": "dd03bf0c-89d6-423a-84bb-18753c23b416",
+        "name": "Body Control Module (BCM)",
+        "stencil_type": "StencilEllipse",
+        "left": 306.0,
+        "top": 76.0,
+        "width": 100.0,
+        "height": 100.0
+      }
+    ],
+    "dfd_edges": [
+      {
+        "guid": "6e015ab5-3b2b-4779-98c0-85706d3b52d0",
+        "source_guid": "84a780e4-1782-4f47-89c6-4a7784d26a91",
+        "target_guid": "6fcd03b4-7101-49f4-8915-c1bb9349e6de",
+        "label": "Call/SMS"
+      },
+      {
+        "guid": "827ae996-3fdf-4575-84e5-e2841ce38c17",
+        "source_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+        "target_guid": "dd03bf0c-89d6-423a-84bb-18753c23b416",
+        "label": "B-CAN data"
+      },
+      {
+        "guid": "932dacbe-a48f-4038-a846-1d9b317f0e67",
+        "source_guid": "d0670c30-af48-41b5-97fa-74bd9e49efb6",
+        "target_guid": "6fcd03b4-7101-49f4-8915-c1bb9349e6de",
+        "label": "Telematic data"
+      },
+      {
+        "guid": "a21422fc-7dd5-4cb4-89c7-4f1b9b007fca",
+        "source_guid": "dd03bf0c-89d6-423a-84bb-18753c23b416",
+        "target_guid": "a8820ccf-1189-4a07-9f83-eff024c2f212",
+        "label": "Lock / Unlock operation"
+      },
+      {
+        "guid": "b61fdc08-11e4-4014-b325-956083b607be",
+        "source_guid": "6fcd03b4-7101-49f4-8915-c1bb9349e6de",
+        "target_guid": "3fa9915a-486c-4d3d-b246-1d38c2f6e586",
+        "label": "CAN"
+      }
+    ],
+    "start_asset_guids": [
+      "84a780e4-1782-4f47-89c6-4a7784d26a91",
+      "d0670c30-af48-41b5-97fa-74bd9e49efb6"
+    ],
+    "end_asset_guids": [
+      "a8820ccf-1189-4a07-9f83-eff024c2f212"
+    ],
+    "node_count": 6,
+    "edge_count": 5
+  },
+  "phase_order": [
+    "Entry",
+    "In",
+    "Through",
+    "Out"
+  ],
+  "path_constraint": "Entry==1 & In==1 & Through>=1 & Out==1",
+  "in_phase_policy": {
+    "attack_vector_mode": "remote",
+    "attack_vector_map": "C:\\Users\\SANE01\\Downloads\\ThreatCraft-main (4)\\ThreatCraft-main\\code\\backend\\threat_library\\automotive\\attack_vector_feasibility_automotive.json",
+    "note": "Only threats with matching attack_vector are allowed as In."
+  },
+  "dependency_policy": {
+    "dependency_map": "C:\\Users\\SANE01\\Downloads\\ThreatCraft-main (4)\\ThreatCraft-main\\code\\backend\\threat_library\\automotive\\dependency_automotive.json",
+    "note": "All mandatory dependency rules must be satisfied for each path; otherwise the path is filtered out."
+  },
+  "out_phase_policy": "Out phase is allowed only on the target asset in this search.",
+  "boundary_policy": {
+    "boundary_rect": {
+      "left": 815.0,
+      "top": 675.0,
+      "width": 667.0,
+      "height": 391.0
+    },
+    "threat_side": "outside",
+    "entry_side": "inside",
+    "note": "Entry node is chosen from the opposite side of the boundary relative to threat-applicable nodes."
+  }
+}

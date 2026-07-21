@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TARA Report for Concept Phase</title>
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/cytoscape-popper/cytoscape-popper.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+    <style>
+        @page { size: A4 portrait; margin: 16mm 14mm; }
+        body { font-family: Arial, sans-serif; margin: 0; color: #1a1a1a; line-height: 1.45; font-size: 13px; background: #f5f7fb; }
+        .container { max-width: 1160px; margin: 16px auto; padding: 0 16px 22px; box-sizing: border-box; }
+        h1 { font-size: 28px; border-bottom: 3px solid #1f2937; padding-bottom: 8px; margin: 0 0 8px 0; break-after: avoid-page; page-break-after: avoid; }
+        h2 { font-size: 20px; margin: 0 0 10px 0; border-left: 6px solid #374151; padding-left: 10px; break-after: avoid-page; page-break-after: avoid; }
+        h3 { font-size: 16px; margin-top: 14px; margin-bottom: 8px; break-after: avoid-page; page-break-after: avoid; }
+        p, li { font-size: 13px; }
+        .note { color: #4b5563; margin-bottom: 14px; font-size: 12px; }
+        .card { background: #f8fafc; border: 1px solid #d1d5db; padding: 12px 14px; border-radius: 8px; margin-top: 10px; break-inside: avoid-page; page-break-inside: avoid; }
+        .section { margin-top: 22px; break-inside: avoid-page; page-break-inside: avoid; }
+        .ai-section { margin-top: 22px; border: 2px solid #8b5cf6; border-radius: 10px; padding: 16px; background: #faf5ff; }
+        .ai-section h2 { border-left-color: #8b5cf6; }
+        .grid { display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 10px; break-inside: avoid-page; page-break-inside: avoid; }
+        .metric { background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 10px; }
+        .metric b { display: block; font-size: 12px; color: #374151; margin-bottom: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; break-inside: avoid-page; page-break-inside: avoid; font-size: 12px; table-layout: fixed; }
+        th, td { border: 1px solid #d1d5db; padding: 7px 8px; text-align: left; vertical-align: top; }
+        th { background: #eef2f7; font-size: 12px; }
+        img { max-width: 100%; height: auto; border: 1px solid #d1d5db; padding: 6px; background: #fff; border-radius: 8px; }
+        .figure-wrap { display: flex; justify-content: flex-start; align-items: center; overflow: visible; width: 100%; }
+        .graph-image { display: block; width: 100%; height: auto; max-width: 100%; max-height: 135mm; object-fit: contain; margin: 0; }
+        .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+        .small { font-size: 10px; color: #4b5563; }
+        .pill { display: inline-block; padding: 2px 7px; border-radius: 999px; background: #e5e7eb; font-size: 9px; margin-right: 5px; }
+        .path-id-col { white-space: nowrap; width: 72px; }
+        ul { margin-top: 6px; }
+        thead { display: table-header-group; }
+        tr, img, .metric, .card, .figure-wrap { break-inside: avoid-page; page-break-inside: avoid; }
+        p, li, td, th { orphans: 3; widows: 3; }
+        .diagram-section { border: 1px solid #d1d5db; border-radius: 10px; padding: 14px; margin-top: 10px; background: #fff; break-inside: avoid-page; page-break-inside: avoid; }
+        .diagram-layout { display: grid; grid-template-columns: 300px 1fr; gap: 12px; height: 640px; }
+        .side-panel { border: 1px solid #ddd; border-radius: 10px; padding: 12px; overflow: auto; background: #fafafa; }
+        .dfd-area { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; background: #fff; position: relative; }
+        #cy { width: 100%; height: 100%; }
+        .detail-pre { margin: 10px 0 0 0; padding: 10px; background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: auto; font-size: 12px; white-space: pre-wrap; word-break: break-word; }
+        .screen-only { display: block; }
+        .print-only { display: none; }
+        @media print {
+            body { font-size: 10.5pt; line-height: 1.35; background: #ffffff; }
+            .container { max-width: none; margin: 0; padding: 0; }
+            .section { break-inside: avoid-page; page-break-inside: avoid; margin-top: 14px; }
+            .ai-section { break-inside: avoid-page; border: 1px solid #8b5cf6; }
+            h1 { font-size: 16pt; }
+            h2 { font-size: 12pt; }
+            h3 { font-size: 10.5pt; }
+            p, li { font-size: 10.5pt; }
+            table, th, td { font-size: 10pt; }
+            .note, .small { font-size: 9pt; }
+            .diagram-layout { grid-template-columns: 1fr; height: auto; }
+            .screen-only { display: none !important; }
+            .print-only { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Threat Analysis and Risk Assessment Report </h1>
+    <p class="note">This report summarizes the identified attack paths, threat scenarios, impact ratings, and risk treatment decisions for the selected system.</p>
+
+    <div class="section">
+    <h2>1. Item Definition</h2>
+    <div class="grid">
+        <div class="metric"><b>Target Asset</b>Door</div>
+        <div class="metric"><b>Attack Vector Mode</b>remote</div>
+        <div class="metric"><b>Boundary</b>External Vehicle Boundary</div>
+    </div>
+    </div>
+
+    <div class="section">
+    <h2>2. Asset Identification</h2>
+    <div class="card">
+        <p><b>Asset:</b> Door</p>
+        <p><b>Relevant Threat Count:</b> 12</p>
+        <p class="small">The target asset was selected from the TM7 item model and the threat scenarios were collected from the asset-to-threat mapping and the filtered attack graph result.</p>
+    </div>
+    </div>
+
+    <div class="section">
+    <h2>3. Impact Rating</h2>
+    <div class="grid">
+        <div class="metric"><b>Safety</b>Major</div>
+        <div class="metric"><b>Financial</b>Major</div>
+        <div class="metric"><b>Operational</b>Moderate</div>
+        <div class="metric"><b>Privacy</b>Negligible</div>
+        <div class="metric"><b>Maximum Impact</b>Major</div>
+        <div class="metric"><b>Impact Score</b>3</div>
+    </div>
+    </div>
+
+    <div class="section">
+    <h2>4. Damage Scenario Identification</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:10%;">Threat ID</th>
+                <th style="width:20%;">Threat Name</th>
+                <th style="width:18%;">Tactic</th>
+                <th style="width:52%;">Damage Scenario</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td>Threat_153</td>
+            <td>Control Doors</td>
+            <td>Affect Vehicle Function</td>
+            <td>This technique can directly cause damage to Door via remote access by enabling Control Doors, resulting in major impact on the target asset.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_165</td>
+            <td>Vehicle Theft</td>
+            <td>Impact</td>
+            <td>This technique can directly cause damage to Door via remote access by enabling Vehicle Theft, resulting in major impact on the target asset.</td>
+        </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+    <div class="section">
+    <h2>5. Threat Scenario Identification</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:10%;">Threat ID</th>
+                <th style="width:20%;">Threat Name</th>
+                <th style="width:18%;">Tactic</th>
+                <th style="width:52%;">Threat Scenario</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td>Threat_24</td>
+            <td>Malicious SMS</td>
+            <td>Initial Access</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_40</td>
+            <td>External Remote Services</td>
+            <td>Initial Access</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_88</td>
+            <td>Network Sniffing</td>
+            <td>Credential Access, Discovery</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_63</td>
+            <td>Exploit Co-Located Computing Device for Privilege Escalation</td>
+            <td>Privilege Escalation</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_109</td>
+            <td>Exploit ECU for Lateral Movement</td>
+            <td>Lateral Movement</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_116</td>
+            <td>Remote services in In-Vehicle Network</td>
+            <td>Lateral Movement</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_108</td>
+            <td>Bridge Vehicle Networks</td>
+            <td>Lateral Movement</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_115</td>
+            <td>Exploitation of Remote Services in In-Vehicle Network</td>
+            <td>Lateral Movement</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_62</td>
+            <td>Abuse Elevation Control Mechanism</td>
+            <td>Privilege Escalation</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_98</td>
+            <td>Network Service Scanning</td>
+            <td>Discovery</td>
+            <td>This technique can be used as a threat scenario against Door via remote access and can contribute to a subsequent damage scenario that leads to major impact.</td>
+        </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+    <div class="section">
+    <h2>6. Attack Path Analysis</h2>
+
+    <h3 style="border-left:5px solid #1e40af;padding-left:10px;margin-top:16px">6-A. Vehicle-Level Attack Paths <span style="font-size:11px;color:#8b5cf6;font-weight:normal">(AI-Generated)</span></h3>
+    <p class="small" style="color:#374151">AI-generated attack path assessments for each UKC path. Each entry includes an attacker-perspective narrative, phase sequence, key assets, tactics, recommendations and required equipment.</p>
+
+    <div class="diagram-section">
+        <h4 style="margin:8px 0">DFD Attack Graph</h4>
+        <div class="screen-only">
+            <div class="diagram-layout">
+                <aside class="side-panel">
+                    <div class="small">
+                        Phase colours:<br>
+                        <span style="color:#22c55e;"><b>In</b></span> &nbsp;
+                        <span style="color:#f59e0b;"><b>Through</b></span> &nbsp;
+                        <span style="color:#ef4444;"><b>Out</b></span>
+                    </div>
+                    <pre id="detail" class="detail-pre">(No element selected)</pre>
+                </aside>
+                <div class="dfd-area"><div id="cy"></div></div>
+            </div>
+        </div>
+        <div class="print-only">
+            <div class="card">
+                <p class="small">Static image — interactive view available in browser.</p>
+                <p>No attack graph image generated.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class='card'><p style='color:#6b7280'>No vehicle-level AI review available. Provide a Gemini API key to enable this section.</p></div>
+
+    <h3 style="border-left:5px solid #7c3aed;padding-left:10px;margin-top:28px">6-B. Functional-Level Threat Scenarios <span style="font-size:11px;color:#7c3aed;font-weight:normal">(AI-Generated)</span></h3>
+    <p class="small" style="color:#374151">Function-level threat scenarios derived from vehicle-level paths. Each scenario maps an attack path to a specific vehicle function, with feasibility ratings and SFOP impact assessment per ISO/SAE 21434.</p>
+    <div class='card'><p style='color:#6b7280'>No functional-level scenarios available. Provide a Gemini API key to enable this section.</p></div>
+
+    </div>
+
+    <div class="section">
+    <h2>7. Attack Feasibility Rating</h2>
+    <div class="card">
+        <span class="pill">Mode: remote</span>
+        <span class="pill">Derived CAL: CAL4</span>
+        <span class="pill">Impact Basis: Major</span>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:10%;">Threat ID</th>
+                <th style="width:20%;">Threat Name</th>
+                <th style="width:12%;">Feasibility</th>
+                <th style="width:12%;">Risk Level</th>
+                <th style="width:10%;">CAL</th>
+                <th style="width:36%;">Risk Treatment Decision</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td>Threat_24</td>
+            <td>Malicious SMS</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_40</td>
+            <td>External Remote Services</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_88</td>
+            <td>Network Sniffing</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_63</td>
+            <td>Exploit Co-Located Computing Device for Privilege Escalation</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_109</td>
+            <td>Exploit ECU for Lateral Movement</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_116</td>
+            <td>Remote services in In-Vehicle Network</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_108</td>
+            <td>Bridge Vehicle Networks</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_115</td>
+            <td>Exploitation of Remote Services in In-Vehicle Network</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_62</td>
+            <td>Abuse Elevation Control Mechanism</td>
+            <td>Low</td>
+            <td>Medium</td>
+            <td>CAL4</td>
+            <td>Reduce if feasible, otherwise retain with explicit rationale</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_98</td>
+            <td>Network Service Scanning</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_153</td>
+            <td>Control Doors</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        <tr>
+            <td>Threat_165</td>
+            <td>Vehicle Theft</td>
+            <td>High</td>
+            <td>High</td>
+            <td>CAL4</td>
+            <td>Reduce and define cybersecurity goals</td>
+        </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+    <div class="section">
+    <h2>8. Risk Value Determination</h2>
+    <div class="card">
+        <p><b>Internal Rule:</b> Risk level is derived from <i>maximum impact</i> and <i>attack feasibility</i>. The score is calculated as Impact(0-4) + Feasibility(0-4), then mapped to Low, Medium, High, or Critical.</p>
+        <ul>
+            <li>0-2: Low</li>
+            <li>3-4: Medium</li>
+            <li>5-6: High</li>
+            <li>7-8: Critical</li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="section">
+    <h2>9. Risk Treatment Decision</h2>
+    <div class="card">
+        <p>For each identified threat scenario, the recommended treatment is shown in the table above. High or Critical risks should be reduced and traced to cybersecurity goals. Medium risks may be reduced or retained with an explicit rationale. Low risks may be retained with documented assumptions and monitoring.</p>
+    </div>
+    </div>
+
+
+
+    <script>
+    const cyContainer = document.getElementById('cy');
+
+    if (cyContainer) {
+        const model = {"nodes": [{"data": {"id": "dd03bf0c-89d6-423a-84bb-18753c23b416", "label": "Body Control Module (BCM)", "type": "process", "stencil_type": "StencilEllipse", "phase": "Through", "highlighted": "yes", "borderColor": "#f59e0b", "desc": "DFD Element: Body Control Module (BCM)\n\nApplicable Threats:\n- [Threat_109] Exploit ECU for Lateral Movement (Phase: Through)"}, "position": {"x": 356.0, "y": 126.0}}, {"data": {"id": "d0670c30-af48-41b5-97fa-74bd9e49efb6", "label": "Telematics Server", "type": "datastore", "stencil_type": "StencilParallelLines", "phase": "Entry", "highlighted": "yes", "borderColor": "#9ca3af", "desc": "DFD Element: Telematics Server\n\nApplicable Threats:\n- [-] - (Phase: Entry)"}, "position": {"x": 1170.0, "y": 819.0}}, {"data": {"id": "847a84fd-0f08-4887-b15d-d120566cb9d1", "label": "GPS", "type": "process", "stencil_type": "StencilEllipse", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: GPS\n\nApplicable Threats:\n- None"}, "position": {"x": 1153.0, "y": 593.0}}, {"data": {"id": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "Gateway", "type": "process", "stencil_type": "StencilEllipse", "phase": "Through", "highlighted": "yes", "borderColor": "#f59e0b", "desc": "DFD Element: Gateway\n\nApplicable Threats:\n- [Threat_88] Network Sniffing (Phase: Through)\n- [Threat_63] Exploit Co-Located Computing Device for Privilege Escalation (Phase: Through)\n- [Threat_116] Remote services in In-Vehicle Network (Phase: Through)\n- [Threat_108] Bridge Vehicle Networks (Phase: Through)\n- [Threat_115] Exploitation of Remote Services in In-Vehicle Network (Phase: Through)\n- [Threat_62] Abuse Elevation Control Mechanism (Phase: Through)\n- [Threat_98] Network Service Scanning (Phase: Through)"}, "position": {"x": 437.0, "y": 317.0}}, {"data": {"id": "6d499a8d-8706-456a-afff-d20174b1f58d", "label": "OBD-II", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: OBD-II\n\nApplicable Threats:\n- None"}, "position": {"x": 162.0, "y": 341.0}}, {"data": {"id": "f0bb2503-6163-41c9-85d3-eb1d6842165e", "label": "Smart\r\nPhone - Server\r\n Connect", "type": "process", "stencil_type": "StencilEllipse", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Smart\r\nPhone - Server\r\n Connect\n\nApplicable Threats:\n- None"}, "position": {"x": 1099.0, "y": 982.0}}, {"data": {"id": "84a780e4-1782-4f47-89c6-4a7784d26a91", "label": "Smart Phone", "type": "external", "stencil_type": "StencilRectangle", "phase": "Entry", "highlighted": "yes", "borderColor": "#9ca3af", "desc": "DFD Element: Smart Phone\n\nApplicable Threats:\n- [-] - (Phase: Entry)"}, "position": {"x": 887.0, "y": 796.0}}, {"data": {"id": "aa0c3faa-10e3-4fe7-8906-ae9d50b8e198", "label": "Engine Control Module (ECM)", "type": "process", "stencil_type": "StencilEllipse", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Engine Control Module (ECM)\n\nApplicable Threats:\n- None"}, "position": {"x": 847.0, "y": 248.0}}, {"data": {"id": "670d5323-d14d-4836-901d-de9aa20d8435", "label": "Automatic Transmission (AT) System", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Automatic Transmission (AT) System\n\nApplicable Threats:\n- None"}, "position": {"x": 1229.0, "y": 501.0}}, {"data": {"id": "5e45a990-8ae2-496e-a9bc-1b0f7f238760", "label": "Transmission Park Position Sensor", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Transmission Park Position Sensor\n\nApplicable Threats:\n- None"}, "position": {"x": 1240.0, "y": 389.0}}, {"data": {"id": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "label": "Airbag Control Unit", "type": "process", "stencil_type": "StencilEllipse", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Airbag Control Unit\n\nApplicable Threats:\n- None"}, "position": {"x": 295.0, "y": 577.0}}, {"data": {"id": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "Chassis Control Module (CCM)", "type": "process", "stencil_type": "StencilEllipse", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Chassis Control Module (CCM)\n\nApplicable Threats:\n- None"}, "position": {"x": 617.0, "y": 600.0}}, {"data": {"id": "3b8703e7-0f6f-4740-a260-e03bd1c814fa", "label": "Collision detection sensor", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Collision detection sensor\n\nApplicable Threats:\n- None"}, "position": {"x": 102.0, "y": 481.0}}, {"data": {"id": "358c63d8-38f2-4d78-ae4d-bd4665b03e26", "label": "Airbag", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Airbag\n\nApplicable Threats:\n- None"}, "position": {"x": 108.0, "y": 591.0}}, {"data": {"id": "e7f2d1f3-9a3e-44a5-bd71-eecb587e7e93", "label": "Safety belt Pretensioner", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Safety belt Pretensioner\n\nApplicable Threats:\n- None"}, "position": {"x": 86.0, "y": 752.0}}, {"data": {"id": "a8820ccf-1189-4a07-9f83-eff024c2f212", "label": "Door", "type": "process", "stencil_type": "StencilEllipse", "phase": "Out", "highlighted": "yes", "borderColor": "#ef4444", "desc": "DFD Element: Door\n\nApplicable Threats:\n- [Threat_165] Vehicle Theft (Phase: Out)\n- [Threat_153] Control Doors (Phase: Out)"}, "position": {"x": 753.0, "y": 77.0}}, {"data": {"id": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "label": "TCU", "type": "process", "stencil_type": "StencilEllipse", "phase": "In", "highlighted": "yes", "borderColor": "#22c55e", "desc": "DFD Element: TCU\n\nApplicable Threats:\n- [Threat_24] Malicious SMS (Phase: In)\n- [Threat_40] External Remote Services (Phase: In)"}, "position": {"x": 938.0, "y": 533.0}}, {"data": {"id": "004df91f-8a98-4b83-a36c-4783b07133dc", "label": "Brake Pedal Module", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Brake Pedal Module\n\nApplicable Threats:\n- None"}, "position": {"x": 744.0, "y": 894.0}}, {"data": {"id": "ec2e0748-6003-4779-b7fc-4785e92cc56f", "label": "Transmission Control Module(TCM)", "type": "process", "stencil_type": "StencilEllipse", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Transmission Control Module(TCM)\n\nApplicable Threats:\n- None"}, "position": {"x": 907.0, "y": 386.0}}, {"data": {"id": "facdf548-7286-4407-8652-83e9ab0c6649", "label": "Artificial satellite", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Artificial satellite\n\nApplicable Threats:\n- None"}, "position": {"x": 1414.0, "y": 765.0}}, {"data": {"id": "dd00bcb9-523c-4101-a43a-e6d4e6f69ca4", "label": "Accelerator Pedal Module", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Accelerator Pedal Module\n\nApplicable Threats:\n- None"}, "position": {"x": 1095.0, "y": 262.0}}, {"data": {"id": "ff3a6390-9b7b-428b-9438-2bd2a3e65fde", "label": "Brake Solenoid Valve", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Brake Solenoid Valve\n\nApplicable Threats:\n- None"}, "position": {"x": 339.0, "y": 884.0}}, {"data": {"id": "fdd6df90-b7ec-4594-8c8f-122c8c4d2ece", "label": "Wheel Sensor", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Wheel Sensor\n\nApplicable Threats:\n- None"}, "position": {"x": 461.0, "y": 913.0}}, {"data": {"id": "633f817a-62f7-41b1-b9c1-72b1bfc56add", "label": "Electronic Parking Brake (EPB) System", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Electronic Parking Brake (EPB) System\n\nApplicable Threats:\n- None"}, "position": {"x": 624.0, "y": 925.0}}, {"data": {"id": "760cc174-eea8-4f34-929b-c1a82c4fdae4", "label": "Head light", "type": "external", "stencil_type": "StencilRectangle", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "DFD Element: Head light\n\nApplicable Threats:\n- None"}, "position": {"x": 162.0, "y": 233.0}}], "edges": [{"data": {"id": "b51e3a94-ed59-4215-bc3b-9a360f5788fc", "source": "f0bb2503-6163-41c9-85d3-eb1d6842165e", "target": "d0670c30-af48-41b5-97fa-74bd9e49efb6", "label": "Telematics data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"b51e3a94-ed59-4215-bc3b-9a360f5788fc\",\n  \"label\": \"Telematics data\",\n  \"source_guid\": \"f0bb2503-6163-41c9-85d3-eb1d6842165e\",\n  \"target_guid\": \"d0670c30-af48-41b5-97fa-74bd9e49efb6\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "4ccbbb09-5831-4d27-bdcc-ae413f31b079", "source": "d0670c30-af48-41b5-97fa-74bd9e49efb6", "target": "f0bb2503-6163-41c9-85d3-eb1d6842165e", "label": "Telematics data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"4ccbbb09-5831-4d27-bdcc-ae413f31b079\",\n  \"label\": \"Telematics data\",\n  \"source_guid\": \"d0670c30-af48-41b5-97fa-74bd9e49efb6\",\n  \"target_guid\": \"f0bb2503-6163-41c9-85d3-eb1d6842165e\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "59656f00-7af7-4bbb-bb06-c92b3b6c7ee7", "source": "84a780e4-1782-4f47-89c6-4a7784d26a91", "target": "f0bb2503-6163-41c9-85d3-eb1d6842165e", "label": "Telematics data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"59656f00-7af7-4bbb-bb06-c92b3b6c7ee7\",\n  \"label\": \"Telematics data\",\n  \"source_guid\": \"84a780e4-1782-4f47-89c6-4a7784d26a91\",\n  \"target_guid\": \"f0bb2503-6163-41c9-85d3-eb1d6842165e\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "2c1f7ec3-2278-42d4-8574-45ea999ffc88", "source": "f0bb2503-6163-41c9-85d3-eb1d6842165e", "target": "84a780e4-1782-4f47-89c6-4a7784d26a91", "label": "Telematics data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"2c1f7ec3-2278-42d4-8574-45ea999ffc88\",\n  \"label\": \"Telematics data\",\n  \"source_guid\": \"f0bb2503-6163-41c9-85d3-eb1d6842165e\",\n  \"target_guid\": \"84a780e4-1782-4f47-89c6-4a7784d26a91\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "1dcea2bf-d905-47b6-acd4-afee35c9c654", "source": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "target": "d0670c30-af48-41b5-97fa-74bd9e49efb6", "label": "Telematics data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"1dcea2bf-d905-47b6-acd4-afee35c9c654\",\n  \"label\": \"Telematics data\",\n  \"source_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"target_guid\": \"d0670c30-af48-41b5-97fa-74bd9e49efb6\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "932dacbe-a48f-4038-a846-1d9b317f0e67", "source": "d0670c30-af48-41b5-97fa-74bd9e49efb6", "target": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "label": "Telematic data", "phase": "Entry", "highlighted": "yes", "borderColor": "#9ca3af", "desc": "{\n  \"guid\": \"932dacbe-a48f-4038-a846-1d9b317f0e67\",\n  \"label\": \"Telematic data\",\n  \"source_guid\": \"d0670c30-af48-41b5-97fa-74bd9e49efb6\",\n  \"target_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"phase\": \"Entry\"\n}"}}, {"data": {"id": "86db5548-4fa1-45fb-8f10-09d0ca1901f5", "source": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "target": "84a780e4-1782-4f47-89c6-4a7784d26a91", "label": "Call/SMS", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"86db5548-4fa1-45fb-8f10-09d0ca1901f5\",\n  \"label\": \"Call/SMS\",\n  \"source_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"target_guid\": \"84a780e4-1782-4f47-89c6-4a7784d26a91\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "6e015ab5-3b2b-4779-98c0-85706d3b52d0", "source": "84a780e4-1782-4f47-89c6-4a7784d26a91", "target": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "label": "Call/SMS", "phase": "Entry", "highlighted": "yes", "borderColor": "#9ca3af", "desc": "{\n  \"guid\": \"6e015ab5-3b2b-4779-98c0-85706d3b52d0\",\n  \"label\": \"Call/SMS\",\n  \"source_guid\": \"84a780e4-1782-4f47-89c6-4a7784d26a91\",\n  \"target_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"phase\": \"Entry\"\n}"}}, {"data": {"id": "5f2e0faa-e4d5-4322-a549-20a31fbe5c29", "source": "6d499a8d-8706-456a-afff-d20174b1f58d", "target": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "CAN Data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"5f2e0faa-e4d5-4322-a549-20a31fbe5c29\",\n  \"label\": \"CAN Data\",\n  \"source_guid\": \"6d499a8d-8706-456a-afff-d20174b1f58d\",\n  \"target_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "6a366c00-1f40-41ad-9fb9-66927976e9c5", "source": "facdf548-7286-4407-8652-83e9ab0c6649", "target": "847a84fd-0f08-4887-b15d-d120566cb9d1", "label": "GPS data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"6a366c00-1f40-41ad-9fb9-66927976e9c5\",\n  \"label\": \"GPS data\",\n  \"source_guid\": \"facdf548-7286-4407-8652-83e9ab0c6649\",\n  \"target_guid\": \"847a84fd-0f08-4887-b15d-d120566cb9d1\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "49e502f5-d584-4473-bc08-7a121203c04c", "source": "847a84fd-0f08-4887-b15d-d120566cb9d1", "target": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "label": "GPS data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"49e502f5-d584-4473-bc08-7a121203c04c\",\n  \"label\": \"GPS data\",\n  \"source_guid\": \"847a84fd-0f08-4887-b15d-d120566cb9d1\",\n  \"target_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "827ae996-3fdf-4575-84e5-e2841ce38c17", "source": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "target": "dd03bf0c-89d6-423a-84bb-18753c23b416", "label": "B-CAN data", "phase": "Through", "highlighted": "yes", "borderColor": "#f59e0b", "desc": "{\n  \"guid\": \"827ae996-3fdf-4575-84e5-e2841ce38c17\",\n  \"label\": \"B-CAN data\",\n  \"source_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"target_guid\": \"dd03bf0c-89d6-423a-84bb-18753c23b416\",\n  \"phase\": \"Through\"\n}"}}, {"data": {"id": "2e027d4a-23c2-411f-908f-d66c236d3bdb", "source": "dd03bf0c-89d6-423a-84bb-18753c23b416", "target": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "B-CAN data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"2e027d4a-23c2-411f-908f-d66c236d3bdb\",\n  \"label\": \"B-CAN data\",\n  \"source_guid\": \"dd03bf0c-89d6-423a-84bb-18753c23b416\",\n  \"target_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "1f7e0eba-617e-43d4-aa8f-e345a7dd84c1", "source": "dd03bf0c-89d6-423a-84bb-18753c23b416", "target": "760cc174-eea8-4f34-929b-c1a82c4fdae4", "label": "Left/Right Signal", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"1f7e0eba-617e-43d4-aa8f-e345a7dd84c1\",\n  \"label\": \"Left/Right Signal\",\n  \"source_guid\": \"dd03bf0c-89d6-423a-84bb-18753c23b416\",\n  \"target_guid\": \"760cc174-eea8-4f34-929b-c1a82c4fdae4\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "767702f6-95b6-4c99-9df3-8d02200633c1", "source": "aa0c3faa-10e3-4fe7-8906-ae9d50b8e198", "target": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "Acceleration data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"767702f6-95b6-4c99-9df3-8d02200633c1\",\n  \"label\": \"Acceleration data\",\n  \"source_guid\": \"aa0c3faa-10e3-4fe7-8906-ae9d50b8e198\",\n  \"target_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "ed46525a-f21b-45f3-872b-ab9f9210c9bb", "source": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "target": "aa0c3faa-10e3-4fe7-8906-ae9d50b8e198", "label": "RPM", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"ed46525a-f21b-45f3-872b-ab9f9210c9bb\",\n  \"label\": \"RPM\",\n  \"source_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"target_guid\": \"aa0c3faa-10e3-4fe7-8906-ae9d50b8e198\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "f4c8d624-9b04-4862-8c35-37a431440f78", "source": "dd00bcb9-523c-4101-a43a-e6d4e6f69ca4", "target": "aa0c3faa-10e3-4fe7-8906-ae9d50b8e198", "label": "Acceleration input", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"f4c8d624-9b04-4862-8c35-37a431440f78\",\n  \"label\": \"Acceleration input\",\n  \"source_guid\": \"dd00bcb9-523c-4101-a43a-e6d4e6f69ca4\",\n  \"target_guid\": \"aa0c3faa-10e3-4fe7-8906-ae9d50b8e198\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "2754efb1-4059-41d2-9adc-7ba862a2d601", "source": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "target": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "C-CAN data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"2754efb1-4059-41d2-9adc-7ba862a2d601\",\n  \"label\": \"C-CAN data\",\n  \"source_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"target_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "680e80fb-b2a1-4e9b-9778-dbbb75ec441a", "source": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "target": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "C-CAN data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"680e80fb-b2a1-4e9b-9778-dbbb75ec441a\",\n  \"label\": \"C-CAN data\",\n  \"source_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"target_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "7dbac3f4-8e22-48b6-bf5a-ad952bba2c1f", "source": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "target": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "label": "Diagnostic data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"7dbac3f4-8e22-48b6-bf5a-ad952bba2c1f\",\n  \"label\": \"Diagnostic data\",\n  \"source_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"target_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "87f6d265-d631-4f56-baff-c3a5795fdf97", "source": "3b8703e7-0f6f-4740-a260-e03bd1c814fa", "target": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "label": "Colision detection data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"87f6d265-d631-4f56-baff-c3a5795fdf97\",\n  \"label\": \"Colision detection data\",\n  \"source_guid\": \"3b8703e7-0f6f-4740-a260-e03bd1c814fa\",\n  \"target_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "661f2c10-055d-4f51-ab82-b7f12fb2db08", "source": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "target": "358c63d8-38f2-4d78-ae4d-bd4665b03e26", "label": "Airbag open", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"661f2c10-055d-4f51-ab82-b7f12fb2db08\",\n  \"label\": \"Airbag open\",\n  \"source_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"target_guid\": \"358c63d8-38f2-4d78-ae4d-bd4665b03e26\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "acb0dc46-8c0f-4796-b786-0ee58d5cc57f", "source": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "target": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "Airbag system log", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"acb0dc46-8c0f-4796-b786-0ee58d5cc57f\",\n  \"label\": \"Airbag system log\",\n  \"source_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"target_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "ea8c6a38-4193-4588-b4ef-feb26df6ad86", "source": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "target": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "label": "Braking data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"ea8c6a38-4193-4588-b4ef-feb26df6ad86\",\n  \"label\": \"Braking data\",\n  \"source_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"target_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "b5fb4e9e-73f6-4b79-b74d-5d7d8786ce97", "source": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "target": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "Diagnostic data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"b5fb4e9e-73f6-4b79-b74d-5d7d8786ce97\",\n  \"label\": \"Diagnostic data\",\n  \"source_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"target_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "be771a17-fcb5-435b-8462-b46c73ad09f9", "source": "9e68e8cc-6e8f-44ec-8726-ea30dd91811d", "target": "e7f2d1f3-9a3e-44a5-bd71-eecb587e7e93", "label": "Airbag Pre-tensioner operation data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"be771a17-fcb5-435b-8462-b46c73ad09f9\",\n  \"label\": \"Airbag Pre-tensioner operation data\",\n  \"source_guid\": \"9e68e8cc-6e8f-44ec-8726-ea30dd91811d\",\n  \"target_guid\": \"e7f2d1f3-9a3e-44a5-bd71-eecb587e7e93\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "002aa859-037d-4a61-b7d0-0e713b18e741", "source": "a8820ccf-1189-4a07-9f83-eff024c2f212", "target": "dd03bf0c-89d6-423a-84bb-18753c23b416", "label": "Lock / Unlock status", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"002aa859-037d-4a61-b7d0-0e713b18e741\",\n  \"label\": \"Lock / Unlock status\",\n  \"source_guid\": \"a8820ccf-1189-4a07-9f83-eff024c2f212\",\n  \"target_guid\": \"dd03bf0c-89d6-423a-84bb-18753c23b416\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "a21422fc-7dd5-4cb4-89c7-4f1b9b007fca", "source": "dd03bf0c-89d6-423a-84bb-18753c23b416", "target": "a8820ccf-1189-4a07-9f83-eff024c2f212", "label": "Lock / Unlock operation", "phase": "Through", "highlighted": "yes", "borderColor": "#f59e0b", "desc": "{\n  \"guid\": \"a21422fc-7dd5-4cb4-89c7-4f1b9b007fca\",\n  \"label\": \"Lock / Unlock operation\",\n  \"source_guid\": \"dd03bf0c-89d6-423a-84bb-18753c23b416\",\n  \"target_guid\": \"a8820ccf-1189-4a07-9f83-eff024c2f212\",\n  \"phase\": \"Through\"\n}"}}, {"data": {"id": "daf8b0ae-929e-4cb2-96b3-5e6fc9f4723f", "source": "a8820ccf-1189-4a07-9f83-eff024c2f212", "target": "dd03bf0c-89d6-423a-84bb-18753c23b416", "label": "Opened / Closed status", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"daf8b0ae-929e-4cb2-96b3-5e6fc9f4723f\",\n  \"label\": \"Opened / Closed status\",\n  \"source_guid\": \"a8820ccf-1189-4a07-9f83-eff024c2f212\",\n  \"target_guid\": \"dd03bf0c-89d6-423a-84bb-18753c23b416\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "74845980-b566-465b-a876-5958df8a6626", "source": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "target": "6d499a8d-8706-456a-afff-d20174b1f58d", "label": "CAN Data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"74845980-b566-465b-a876-5958df8a6626\",\n  \"label\": \"CAN Data\",\n  \"source_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"target_guid\": \"6d499a8d-8706-456a-afff-d20174b1f58d\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "b61fdc08-11e4-4014-b325-956083b607be", "source": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "target": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "CAN", "phase": "In", "highlighted": "yes", "borderColor": "#22c55e", "desc": "{\n  \"guid\": \"b61fdc08-11e4-4014-b325-956083b607be\",\n  \"label\": \"CAN\",\n  \"source_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"target_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"phase\": \"In\"\n}"}}, {"data": {"id": "516bd6d5-9f1d-427d-8bbb-cfa2af3c0a08", "source": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "target": "6fcd03b4-7101-49f4-8915-c1bb9349e6de", "label": "CAN", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"516bd6d5-9f1d-427d-8bbb-cfa2af3c0a08\",\n  \"label\": \"CAN\",\n  \"source_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"target_guid\": \"6fcd03b4-7101-49f4-8915-c1bb9349e6de\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "d27248a6-a7ae-4ef7-8132-d3c65f9f8e7f", "source": "ec2e0748-6003-4779-b7fc-4785e92cc56f", "target": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "label": "Transmission data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"d27248a6-a7ae-4ef7-8132-d3c65f9f8e7f\",\n  \"label\": \"Transmission data\",\n  \"source_guid\": \"ec2e0748-6003-4779-b7fc-4785e92cc56f\",\n  \"target_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "4f6522a2-279c-4ea2-a7c4-e1de67599231", "source": "3fa9915a-486c-4d3d-b246-1d38c2f6e586", "target": "ec2e0748-6003-4779-b7fc-4785e92cc56f", "label": "Transmission data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"4f6522a2-279c-4ea2-a7c4-e1de67599231\",\n  \"label\": \"Transmission data\",\n  \"source_guid\": \"3fa9915a-486c-4d3d-b246-1d38c2f6e586\",\n  \"target_guid\": \"ec2e0748-6003-4779-b7fc-4785e92cc56f\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "55973b73-99db-4dbc-931b-2965f695193c", "source": "5e45a990-8ae2-496e-a9bc-1b0f7f238760", "target": "ec2e0748-6003-4779-b7fc-4785e92cc56f", "label": "P/NOT P Position Status", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"55973b73-99db-4dbc-931b-2965f695193c\",\n  \"label\": \"P/NOT P Position Status\",\n  \"source_guid\": \"5e45a990-8ae2-496e-a9bc-1b0f7f238760\",\n  \"target_guid\": \"ec2e0748-6003-4779-b7fc-4785e92cc56f\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "d127498a-caef-4570-8a55-9e22ca36650b", "source": "ec2e0748-6003-4779-b7fc-4785e92cc56f", "target": "670d5323-d14d-4836-901d-de9aa20d8435", "label": "Transmission Control", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"d127498a-caef-4570-8a55-9e22ca36650b\",\n  \"label\": \"Transmission Control\",\n  \"source_guid\": \"ec2e0748-6003-4779-b7fc-4785e92cc56f\",\n  \"target_guid\": \"670d5323-d14d-4836-901d-de9aa20d8435\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "89fcc53c-e868-4637-802f-a936968ed469", "source": "670d5323-d14d-4836-901d-de9aa20d8435", "target": "ec2e0748-6003-4779-b7fc-4785e92cc56f", "label": "Transmission Status", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"89fcc53c-e868-4637-802f-a936968ed469\",\n  \"label\": \"Transmission Status\",\n  \"source_guid\": \"670d5323-d14d-4836-901d-de9aa20d8435\",\n  \"target_guid\": \"ec2e0748-6003-4779-b7fc-4785e92cc56f\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "49db4c2d-0d33-42bb-a358-4ebbcd6b4a48", "source": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "target": "ff3a6390-9b7b-428b-9438-2bd2a3e65fde", "label": "Damping Control", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"49db4c2d-0d33-42bb-a358-4ebbcd6b4a48\",\n  \"label\": \"Damping Control\",\n  \"source_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"target_guid\": \"ff3a6390-9b7b-428b-9438-2bd2a3e65fde\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "c1e50bb1-d384-4827-ba60-15198e89a4b5", "source": "004df91f-8a98-4b83-a36c-4783b07133dc", "target": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "Brake Pedal push data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"c1e50bb1-d384-4827-ba60-15198e89a4b5\",\n  \"label\": \"Brake Pedal push data\",\n  \"source_guid\": \"004df91f-8a98-4b83-a36c-4783b07133dc\",\n  \"target_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "9b20111d-1c1f-40ec-911b-849895d053b7", "source": "fdd6df90-b7ec-4594-8c8f-122c8c4d2ece", "target": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "Acceleration data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"9b20111d-1c1f-40ec-911b-849895d053b7\",\n  \"label\": \"Acceleration data\",\n  \"source_guid\": \"fdd6df90-b7ec-4594-8c8f-122c8c4d2ece\",\n  \"target_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "df714e05-1bb3-4300-a1d1-9b4abfc99b36", "source": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "target": "633f817a-62f7-41b1-b9c1-72b1bfc56add", "label": "Braking Control", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"df714e05-1bb3-4300-a1d1-9b4abfc99b36\",\n  \"label\": \"Braking Control\",\n  \"source_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"target_guid\": \"633f817a-62f7-41b1-b9c1-72b1bfc56add\",\n  \"phase\": \"-\"\n}"}}, {"data": {"id": "4c35aedd-671d-42a8-84aa-73245575f2a4", "source": "fdd6df90-b7ec-4594-8c8f-122c8c4d2ece", "target": "c1b190e2-91fb-4c5b-878e-220c0ca15aeb", "label": "Up&Down Acceleration data", "phase": "", "highlighted": "no", "borderColor": "#cbd5e1", "desc": "{\n  \"guid\": \"4c35aedd-671d-42a8-84aa-73245575f2a4\",\n  \"label\": \"Up&Down Acceleration data\",\n  \"source_guid\": \"fdd6df90-b7ec-4594-8c8f-122c8c4d2ece\",\n  \"target_guid\": \"c1b190e2-91fb-4c5b-878e-220c0ca15aeb\",\n  \"phase\": \"-\"\n}"}}]};
+
+        const cy = cytoscape({
+          container: cyContainer,
+          elements: [...model.nodes, ...model.edges],
+          layout: {
+            name: 'preset'
+          },
+          style: [
+            {
+              selector: 'node',
+              style: {
+                'label': 'data(label)',
+                'text-valign': 'center',
+                'text-halign': 'center',
+                'font-size': 11,
+                'width': 150,
+                'height': 55,
+                'shape': 'round-rectangle',
+                'border-width': 1.2,
+                'border-color': '#64748b',
+                'background-color': '#ffffff',
+                'color': '#111827',
+                'text-wrap': 'wrap',
+                'text-max-width': 120
+              }
+            },
+            {
+              selector: 'node[type="process"]',
+              style: {
+                'shape': 'ellipse',
+                'width': 95,
+                'height': 95
+              }
+            },
+            {
+              selector: 'node[type="datastore"]',
+              style: {
+                'shape': 'round-rectangle',
+                'width': 180,
+                'height': 55
+              }
+            },
+            {
+              selector: 'node[type="external"]',
+              style: {
+                'shape': 'rectangle',
+                'width': 150,
+                'height': 55
+              }
+            },
+            {
+              selector: 'node[highlighted="yes"]',
+              style: {
+                'border-width': 4,
+                'border-color': 'data(borderColor)'
+              }
+            },
+            {
+              selector: 'node[phase = "In"]',
+              style: {
+                'border-color': '#22c55e',
+                'background-color': '#f0fdf4'
+              }
+            },
+            {
+              selector: 'node[phase = "Through"]',
+              style: {
+                'border-color': '#f59e0b',
+                'background-color': '#fffbeb'
+              }
+            },
+            {
+              selector: 'node[phase = "Out"]',
+              style: {
+                'border-color': '#ef4444',
+                'background-color': '#fef2f2'
+              }
+            },
+            {
+              selector: 'edge',
+              style: {
+                'curve-style': 'bezier',
+                'target-arrow-shape': 'triangle',
+                'label': 'data(label)',
+                'font-size': 10,
+                'text-rotation': 'autorotate',
+                'text-margin-y': -8,
+                'arrow-scale': 0.8,
+                'width': 1.8,
+                'line-color': '#94a3b8',
+                'target-arrow-color': '#94a3b8',
+                'color': '#475569'
+              }
+        },
+            {
+              selector: 'edge[phase = "In"]',
+              style: {
+                'width': 4,
+                'line-color': '#22c55e',
+                'target-arrow-color': '#22c55e'
+              }
+            },
+            {
+              selector: 'edge[phase = "Through"]',
+              style: {
+                'width': 4,
+                'line-color': '#f59e0b',
+                'target-arrow-color': '#f59e0b'
+              }
+            },
+            {
+              selector: 'edge[phase = "Out"]',
+              style: {
+                'width': 4,
+                'line-color': '#ef4444',
+                'target-arrow-color': '#ef4444'
+              }
+            },
+            {
+              selector: ':selected',
+              style: {
+                'overlay-opacity': 0,
+                'border-width': 5
+              }
+            }
+          ]
+        });
+
+        const detail = document.getElementById('detail');
+
+        cy.on('tap', 'node, edge', (evt) => {
+          const d = evt.target.data();
+          if (detail) {
+            detail.textContent = d.desc || JSON.stringify(d, null, 2);
+          }
+        });
+
+        cy.on('tap', (evt) => {
+          if (evt.target === cy && detail) {
+            detail.textContent = '(No element selected)';
+          }
+        });
+
+        function makeTippy(ele) {
+          const ref = ele.popperRef();
+          const dummy = document.createElement('div');
+          document.body.appendChild(dummy);
+          const tip = tippy(dummy, {
+            getReferenceClientRect: ref.getBoundingClientRect,
+            content: ele.data('label') || ele.data('desc') || '',
+            trigger: 'manual',
+            placement: 'top',
+            animation: 'scale',
+        });
+          return tip;
+        }
+
+        cy.nodes().forEach(n => n.data('tip', makeTippy(n)));
+        cy.edges().forEach(e => e.data('tip', makeTippy(e)));
+
+        cy.on('mouseover', 'node, edge', (evt) => evt.target.data('tip').show());
+        cy.on('mouseout', 'node, edge', (evt) => evt.target.data('tip').hide());
+
+        cy.fit(undefined, 30);
+    }
+</script>
+
+  </body>
+</html>
